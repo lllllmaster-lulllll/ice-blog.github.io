@@ -6,17 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2022/2 | Hexo</title>
+  <title>Hexo</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
+  <meta name="description" content="Mac 卸载annconda第一步，删除Anaconda的配置，命令如下12conda install anaconda-cleananaconda-clean  删除备份1rm -r &#x2F;Users&#x2F;aurora&#x2F;.anaconda_backup&#x2F;2022-02-08T193117  注：命令中黑色文字就是上图中的 Backup directory，直接复制替换即可 第二步，删除Anaconda的">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2022/02/index.html">
+<meta property="og:url" content="http://example.com/2022/02/08/Mac%20%E5%8D%B8%E8%BD%BDannconda/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Mac 卸载annconda第一步，删除Anaconda的配置，命令如下12conda install anaconda-cleananaconda-clean  删除备份1rm -r &#x2F;Users&#x2F;aurora&#x2F;.anaconda_backup&#x2F;2022-02-08T193117  注：命令中黑色文字就是上图中的 Backup directory，直接复制替换即可 第二步，删除Anaconda的">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202081949496.png">
+<meta property="article:published_time" content="2022-02-08T11:51:32.321Z">
+<meta property="article:modified_time" content="2022-02-08T11:51:32.321Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202081949496.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -239,142 +245,184 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Mac 卸载annconda" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+  <div class="article-entry" itemprop="articleBody">
     
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/09/JetBrains%20%E6%BF%80%E6%B4%BB%E6%95%99%E7%A8%8B/" class="archive-article-date">
-        <time datetime="2022-02-09T07:37:15.621Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-09</time>
-</a>
+    <h1 id="Mac-卸载annconda"><a href="#Mac-卸载annconda" class="headerlink" title="Mac 卸载annconda"></a>Mac 卸载annconda</h1><h2 id="第一步，删除Anaconda的配置，命令如下"><a href="#第一步，删除Anaconda的配置，命令如下" class="headerlink" title="第一步，删除Anaconda的配置，命令如下"></a>第一步，删除<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=Anaconda&spm=1001.2101.3001.7020">Anaconda</a>的配置，命令如下</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda install anaconda-clean</span><br><span class="line">anaconda-clean</span><br></pre></td></tr></table></figure>
 
-        </div>
-    	 
+<h3 id="删除备份"><a href="#删除备份" class="headerlink" title="删除备份"></a>删除备份</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -r /Users/aurora/.anaconda_backup/2022-02-08T193117</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
+<p><strong>注：命令中黑色文字就是上图中的 Backup directory，直接复制替换即可</strong></p>
+<h2 id="第二步，删除Anaconda的文件夹，命令如下"><a href="#第二步，删除Anaconda的文件夹，命令如下" class="headerlink" title="第二步，删除Anaconda的文件夹，命令如下"></a>第二步，删除Anaconda的文件夹，命令如下</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf ~/opt/anaconda3</span><br></pre></td></tr></table></figure>
+
+<h2 id="第三步，删除-x2F-bash-profile-也可能是其他配置文件-中anaconda的环境变量，可以使用vim打开删除"><a href="#第三步，删除-x2F-bash-profile-也可能是其他配置文件-中anaconda的环境变量，可以使用vim打开删除" class="headerlink" title="第三步，删除 ~&#x2F;.bash_profile(也可能是其他配置文件)中anaconda的环境变量，可以使用vim打开删除"></a>第三步，删除 ~&#x2F;.bash_profile(也可能是其他配置文件)中anaconda的环境变量，可以使用vim打开删除</h2><p><strong>打开terminal，输入如下命令</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .bash_profile</span><br></pre></td></tr></table></figure>
+
+<h2 id="第四步，删除Anaconda的可能存在隐藏的文件"><a href="#第四步，删除Anaconda的可能存在隐藏的文件" class="headerlink" title="第四步，删除Anaconda的可能存在隐藏的文件"></a>第四步，删除Anaconda的可能存在隐藏的文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf ~/.condarc ~/.conda ~/.continuum</span><br></pre></td></tr></table></figure>
+
+<h3 id="第五步，验证"><a href="#第五步，验证" class="headerlink" title="第五步，验证"></a>第五步，验证</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">anadonca -V</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202081949496.png" alt="image-20220208194952465"></p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          John Doe
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://example.com/2022/02/08/Mac 卸载annconda/" title="" target="_blank">http://example.com/2022/02/08/Mac 卸载annconda/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
-          
+          本文章著作权归作者所有
+        </li>
+        
+      </ul>
+    </div>
+    
 
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/02/08/Mac%20%E5%8D%B8%E8%BD%BDannconda/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/09/Adobe/" class="archive-article-date">
-        <time datetime="2022-02-08T17:19:14.991Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-09</time>
-</a>
-
-        </div>
-    	 
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/08/go%20%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" class="archive-article-date">
-        <time datetime="2022-02-08T12:25:29.729Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-08</time>
-</a>
-
-        </div>
-    	 
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/08/conda%E8%AE%BE%E7%BD%AE/" class="archive-article-date">
-        <time datetime="2022-02-08T12:05:44.974Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-08</time>
-</a>
-
-        </div>
-    	 
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/08/Mac%20%E5%8D%B8%E8%BD%BDannconda/" class="archive-article-date">
-        <time datetime="2022-02-08T11:51:32.321Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-08</time>
-</a>
-
-        </div>
-    	 
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+    <a href="/2022/02/08/conda%E8%AE%BE%E7%BD%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
   
   
-    </div></section>
-  
+</nav>
 
-    
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -415,8 +463,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

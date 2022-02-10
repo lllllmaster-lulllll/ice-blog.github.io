@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title></title>
+    <url>/2022/02/09/Adobe/</url>
+    <content><![CDATA[<p>亲<del>收货了</del><br>以下是您订购的订单2265145777507438237的内容请注意查收：<br>软件绑码识别！全套内只能选择一款进行下载安装！识别安装第一个成功的为准，多下载安装崩溃则不进行售后处理！<br>复制下面的链接到电脑浏览器最上面网址栏打开（不要去搜索链接） 然后按照下面的安装教程安装<br>软件安装包下载链接：   <a href="https://www.yuque.com/docs/share/ab477682-0ee0-467e-8020-1b1b37556767#">https://www.yuque.com/docs/share/ab477682-0ee0-467e-8020-1b1b37556767?#</a></p>
+<p> 不要在V信里面下载，需要哪个下载哪个只能安装一个，安装第二个会导致第一个软件崩溃，因为没有开通安装权限！请熟知！</p>
+<p>windows系统安装教程：<a href="https://www.yuque.com/docs/share/27b39abb-44d9-47be-9263-85dabb6d6fa9#">https://www.yuque.com/docs/share/27b39abb-44d9-47be-9263-85dabb6d6fa9?#</a> </p>
+<p>Mac系统安装教程：<a href="https://www.yuque.com/docs/share/6f82a804-7429-4e65-9119-1510859e527d#">https://www.yuque.com/docs/share/6f82a804-7429-4e65-9119-1510859e527d?#</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/02/09/JetBrains%20%E6%BF%80%E6%B4%BB%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="JetBrains-激活"><a href="#JetBrains-激活" class="headerlink" title="JetBrains 激活"></a>JetBrains 激活</h1><p>免责声明：所有教程均来源于网络，完全免费！不得将下述内容用于商业或者非法用途，否则，一切后果自负。版权争议与我无关，您必须在下载后的24个小时之内，从您的电脑中彻底删除下述内容。访问和下载下述内容，说明您已同意上述条款。</p>
+<p>方案1、正版激活码</p>
+<p>第一步，打开链接：<a href="http://idea.javatiku.cn/">http://idea.javatiku.cn</a><br>第二步，输入验证码：1567</p>
+<p>说明：浏览器打开体验更好。</p>
+<p>方案2、pojie补丁下载地址（推荐）</p>
+<p>补丁使用教程见压缩包</p>
+<p>链接: <a href="https://pan.baidu.com/s/1yBU5YlWNqvjda7pwS_lvTg">https://pan.baidu.com/s/1yBU5YlWNqvjda7pwS_lvTg</a> 提取码: s4q4 </p>
+<p>如遇软件使用问题无法解决，请加微信：pydd156</p>
+<p>本号启用取关验证功能，取关后再次关注将无法使用部分功能，请勿轻易取关</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/02/08/Mac%20%E5%8D%B8%E8%BD%BDannconda/</url>
+    <content><![CDATA[<h1 id="Mac-卸载annconda"><a href="#Mac-卸载annconda" class="headerlink" title="Mac 卸载annconda"></a>Mac 卸载annconda</h1><h2 id="第一步，删除Anaconda的配置，命令如下"><a href="#第一步，删除Anaconda的配置，命令如下" class="headerlink" title="第一步，删除Anaconda的配置，命令如下"></a>第一步，删除<a href="https://so.csdn.net/so/search?q=Anaconda&spm=1001.2101.3001.7020">Anaconda</a>的配置，命令如下</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda install anaconda-clean</span><br><span class="line">anaconda-clean</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除备份"><a href="#删除备份" class="headerlink" title="删除备份"></a>删除备份</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm -r /Users/aurora/.anaconda_backup/2022-02-08T193117</span><br></pre></td></tr></table></figure>
+
+<p><strong>注：命令中黑色文字就是上图中的 Backup directory，直接复制替换即可</strong></p>
+<h2 id="第二步，删除Anaconda的文件夹，命令如下"><a href="#第二步，删除Anaconda的文件夹，命令如下" class="headerlink" title="第二步，删除Anaconda的文件夹，命令如下"></a>第二步，删除Anaconda的文件夹，命令如下</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm -rf ~/opt/anaconda3</span><br></pre></td></tr></table></figure>
+
+<h2 id="第三步，删除-x2F-bash-profile-也可能是其他配置文件-中anaconda的环境变量，可以使用vim打开删除"><a href="#第三步，删除-x2F-bash-profile-也可能是其他配置文件-中anaconda的环境变量，可以使用vim打开删除" class="headerlink" title="第三步，删除 ~&#x2F;.bash_profile(也可能是其他配置文件)中anaconda的环境变量，可以使用vim打开删除"></a>第三步，删除 ~&#x2F;.bash_profile(也可能是其他配置文件)中anaconda的环境变量，可以使用vim打开删除</h2><p><strong>打开terminal，输入如下命令</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim .bash_profile</span><br></pre></td></tr></table></figure>
+
+<h2 id="第四步，删除Anaconda的可能存在隐藏的文件"><a href="#第四步，删除Anaconda的可能存在隐藏的文件" class="headerlink" title="第四步，删除Anaconda的可能存在隐藏的文件"></a>第四步，删除Anaconda的可能存在隐藏的文件</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm -rf ~/.condarc ~/.conda ~/.continuum</span><br></pre></td></tr></table></figure>
+
+<h3 id="第五步，验证"><a href="#第五步，验证" class="headerlink" title="第五步，验证"></a>第五步，验证</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">anadonca -V</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202081949496.png" alt="image-20220208194952465"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/02/08/conda%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="conda-常用设置"><a href="#conda-常用设置" class="headerlink" title="conda 常用设置"></a>conda 常用设置</h1><h2 id="conda-关闭默认启动环境（base）"><a href="#conda-关闭默认启动环境（base）" class="headerlink" title="conda 关闭默认启动环境（base）"></a>conda 关闭默认启动环境（base）</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda config --set auto_activate_base false</span><br></pre></td></tr></table></figure>
+
+<h2 id="conda切换国内源-中科大"><a href="#conda切换国内源-中科大" class="headerlink" title="conda切换国内源(中科大)"></a>conda切换国内源(中科大)</h2><h4 id="shell-环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）"><a href="#shell-环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）" class="headerlink" title="shell 环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）"></a>shell 环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</span><br><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看是否添加成功"><a href="#查看是否添加成功" class="headerlink" title="查看是否添加成功"></a>查看是否添加成功</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim ~/.condarc</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202082023813.png" alt="image-20220208202358789"></p>
+<h2 id="常用的命令"><a href="#常用的命令" class="headerlink" title="常用的命令"></a>常用的命令</h2><ul>
+<li>查看conda版本</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda --version</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>更新conda版本</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda update conda</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看都安装了那些依赖库</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda list</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建新的python环境</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda create --name myenv</span><br></pre></td></tr></table></figure>
+
+<p>并且还可以指定python的版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda create -n myenv python=3.7</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建新环境并指定包含的库</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda create -n myenv scipy</span><br></pre></td></tr></table></figure>
+
+<p>并且还可以指定库的版本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda create -n myenv scipy=0.15.0</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>复制环境</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda create --name myclone --clone myenv</span><br></pre></td></tr></table></figure>
+
+<p>查看是不是复制成功了</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda info --envs</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>激活、进入某个环境</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ source activate myenv</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>退出环境</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ source deactivate</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除环境</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda remove --name myenv --all</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看当前的环境列表</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda info --envs or $ conda env list</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看某个环境下安装的库</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda list -n myenv</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查找包</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda search XXX</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装包</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda install XXX</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>更新包</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda update XXX</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除包</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda remove XXX</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装到指定环境</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ conda install -n myenv XXX</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2022/02/08/go%20%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="go-语言环境安装"><a href="#go-语言环境安装" class="headerlink" title="go 语言环境安装"></a>go 语言环境安装</h1><h4 id="1-下载go安装包"><a href="#1-下载go安装包" class="headerlink" title="1. 下载go安装包"></a>1. 下载go安装包</h4><p>官网下载go安装包： <a href="https://golang.google.cn/dl/">https://golang.google.cn/dl/</a></p>
+<p>下载go二进制包<code>go1.16.2.darwin-amd64.tar.gz</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget -c https://golang.google.cn/dl/go1.16.2.darwin-amd64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-安装go"><a href="#2-安装go" class="headerlink" title="2. 安装go"></a>2. 安装go</h4><p>安装目录： <code>/usr/local/go</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo tar -xzvf go1.16.2.darwin-amd64.tar.gz -C /usr/local</span><br><span class="line">cd /usr/local/go</span><br></pre></td></tr></table></figure>
+
+<p>查看go的安装目录:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /usr/local/go</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-配置环境变量"><a href="#3-配置环境变量" class="headerlink" title="3. 配置环境变量"></a>3. 配置环境变量</h4><p>编辑<code>~/.bash_profile</code>文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim ~/.bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>追加以下内容：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export GOROOT=/usr/local/go</span><br><span class="line">export PATH=$PATH:$GOROOT/bin</span><br><span class="line">export GOPATH=$HOME/iceCode/godev</span><br></pre></td></tr></table></figure>
+
+<p>注意， <code>GOPATH</code>配置为你的工作区目录</p>
+<p>编辑<code>~/.zshrc</code>文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>追加以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>使终端对以上配置的环境变量生效：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-检测go开发环境是否安装成功"><a href="#4-检测go开发环境是否安装成功" class="headerlink" title="4. 检测go开发环境是否安装成功"></a>4. 检测go开发环境是否安装成功</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ go env</span><br><span class="line"></span><br><span class="line">省略...</span><br><span class="line"></span><br><span class="line">GOPATH=&quot;/Users/xx/go&quot;</span><br><span class="line">GOROOT=&quot;/usr/local/go&quot;</span><br><span class="line"></span><br><span class="line">省略...</span><br></pre></td></tr></table></figure>
+
+<p>其中，</p>
+<ul>
+<li>GOPATH： go工作区， 即编写代码存放的目录</li>
+<li>GOROOT： go的安装目录</li>
+</ul>
+<p>查看版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ go version</span><br><span class="line">go version go1.16.2 darwin/amd64</span><br></pre></td></tr></table></figure>
+
+<p>在<code>GOPATH</code>工作区目录下， 一般有3个目录， 分别是</p>
+<ul>
+<li>bin: 存储可执行bin文件</li>
+<li>pkg: 编译完成的文件</li>
+<li>src: 源代码文件</li>
+</ul>
+<p><code>$GOPATH/pkg</code>目录在执行<code>go get -u 库名</code>会自动创建， <code>src</code>目录不存在则需要手动创建， 示例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir -p $GOPATH/src</span><br><span class="line">mkdir -p $GOPATH/bin</span><br></pre></td></tr></table></figure>
+
+<p>在<code>$GOPATH/src</code>目录下， 创建新项目进行开发</p>
+<h4 id="5-设置go国内模块代理"><a href="#5-设置go国内模块代理" class="headerlink" title="5. 设置go国内模块代理"></a>5. 设置go国内模块代理</h4><p>参考： <a href="https://goproxy.cn/">https://goproxy.cn/</a></p>
+<p>编辑<code>~/.bash_profile</code>:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim ~/.bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>追加以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export GO111MODULE=on</span><br><span class="line">export GOPROXY=https://goproxy.cn</span><br></pre></td></tr></table></figure>
+
+<p>使以上配置的环境变量生效：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>至此， go开发环境安装成功。</p>
+<h4 id="6-创建go的hello项目"><a href="#6-创建go的hello项目" class="headerlink" title="6. 创建go的hello项目"></a>6. 创建go的hello项目</h4><p>创建go的hello项目：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cd $GOPATH/src</span><br><span class="line">$ mkdir hello</span><br><span class="line">$ cd hello</span><br><span class="line">$ go mod init zhuxiongxian.com/hello</span><br><span class="line">go: creating new go.mod: module zhuxiongxian.com/hello</span><br><span class="line">go: to add module requirements and sums:</span><br><span class="line">	go mod tidy</span><br><span class="line">$ go mod tidy</span><br></pre></td></tr></table></figure>
+
+<p>其中，</p>
+<ul>
+<li><code>go mod tidy</code>: 增加缺少的module， 删除无用的module</li>
+<li>go get&#x2F;go run&#x2F;go build会自动下载依赖</li>
+</ul>
+<p>创建hello.go文件:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim hello.go</span><br></pre></td></tr></table></figure>
+
+<p>hello.go文件内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">    fmt.Println(&quot;Hello, World!&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行go的hello项目：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cd cd $GOPATH/src/hello</span><br><span class="line">$ go run .</span><br><span class="line">Hello, World!</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-安装gin框架"><a href="#7-安装gin框架" class="headerlink" title="7. 安装gin框架"></a>7. 安装gin框架</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">go get -u github.com/gin-gonic/gin</span><br></pre></td></tr></table></figure>
+
+<p>在代码中导包：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">import &quot;github.com/gin-gonic/gin&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-创建gin的demo项目"><a href="#8-创建gin的demo项目" class="headerlink" title="8. 创建gin的demo项目"></a>8. 创建gin的demo项目</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd $GOPATH/src</span><br><span class="line">mkdir gin-demo</span><br><span class="line">cd gin-demo</span><br><span class="line">vim example.go</span><br></pre></td></tr></table></figure>
+
+<p>example.go文件内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;github.com/gin-gonic/gin&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">    r := gin.Default()</span><br><span class="line">    r.GET(&quot;/ping&quot;, func(c *gin.Context) &#123;</span><br><span class="line">        c.JSON(200, gin.H&#123;</span><br><span class="line">            &quot;message&quot;: &quot;pong&quot;,</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">    // r.Run() // listen and serve on 0.0.0.0:8080 (for windows &quot;localhost:8080&quot;)</span><br><span class="line">    r.Run(&quot;:10240&quot;)</span><br><span class="line">&#125;</span><br><span class="line">go mod init zhuxiongxian.com/gin-demo</span><br><span class="line">go mod tidy</span><br><span class="line">go run example.go</span><br><span class="line">或</span><br><span class="line">go run .</span><br></pre></td></tr></table></figure>
+
+<p>访问： <a href="http://0.0.0.0:10240/ping">http://0.0.0.0:10240/ping</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;message&quot;: &quot;pong&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+</search>
