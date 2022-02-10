@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title></title>
-    <url>https://lllllmaster-lulllll.github.io/2022/02/09/Adobe/</url>
+    <url>/2022/02/09/Adobe/</url>
     <content><![CDATA[<p>亲<del>收货了</del><br>以下是您订购的订单2265145777507438237的内容请注意查收：<br>软件绑码识别！全套内只能选择一款进行下载安装！识别安装第一个成功的为准，多下载安装崩溃则不进行售后处理！<br>复制下面的链接到电脑浏览器最上面网址栏打开（不要去搜索链接） 然后按照下面的安装教程安装<br>软件安装包下载链接：   <a href="https://www.yuque.com/docs/share/ab477682-0ee0-467e-8020-1b1b37556767#">https://www.yuque.com/docs/share/ab477682-0ee0-467e-8020-1b1b37556767?#</a></p>
 <p> 不要在V信里面下载，需要哪个下载哪个只能安装一个，安装第二个会导致第一个软件崩溃，因为没有开通安装权限！请熟知！</p>
 <p>windows系统安装教程：<a href="https://www.yuque.com/docs/share/27b39abb-44d9-47be-9263-85dabb6d6fa9#">https://www.yuque.com/docs/share/27b39abb-44d9-47be-9263-85dabb6d6fa9?#</a> </p>
@@ -11,7 +11,7 @@
   </entry>
   <entry>
     <title></title>
-    <url>https://lllllmaster-lulllll.github.io/2022/02/09/JetBrains%20%E6%BF%80%E6%B4%BB%E6%95%99%E7%A8%8B/</url>
+    <url>/2022/02/09/JetBrains%20%E6%BF%80%E6%B4%BB%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="JetBrains-激活"><a href="#JetBrains-激活" class="headerlink" title="JetBrains 激活"></a>JetBrains 激活</h1><p>免责声明：所有教程均来源于网络，完全免费！不得将下述内容用于商业或者非法用途，否则，一切后果自负。版权争议与我无关，您必须在下载后的24个小时之内，从您的电脑中彻底删除下述内容。访问和下载下述内容，说明您已同意上述条款。</p>
 <p>方案1、正版激活码</p>
 <p>第一步，打开链接：<a href="http://idea.javatiku.cn/">http://idea.javatiku.cn</a><br>第二步，输入验证码：1567</p>
@@ -25,7 +25,7 @@
   </entry>
   <entry>
     <title></title>
-    <url>https://lllllmaster-lulllll.github.io/2022/02/08/Mac%20%E5%8D%B8%E8%BD%BDannconda/</url>
+    <url>/2022/02/08/Mac%20%E5%8D%B8%E8%BD%BDannconda/</url>
     <content><![CDATA[<h1 id="Mac-卸载annconda"><a href="#Mac-卸载annconda" class="headerlink" title="Mac 卸载annconda"></a>Mac 卸载annconda</h1><h2 id="第一步，删除Anaconda的配置，命令如下"><a href="#第一步，删除Anaconda的配置，命令如下" class="headerlink" title="第一步，删除Anaconda的配置，命令如下"></a>第一步，删除<a href="https://so.csdn.net/so/search?q=Anaconda&spm=1001.2101.3001.7020">Anaconda</a>的配置，命令如下</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda install anaconda-clean</span><br><span class="line">anaconda-clean</span><br></pre></td></tr></table></figure>
 
 <h3 id="删除备份"><a href="#删除备份" class="headerlink" title="删除备份"></a>删除备份</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm -r /Users/aurora/.anaconda_backup/2022-02-08T193117</span><br></pre></td></tr></table></figure>
@@ -45,7 +45,7 @@
   </entry>
   <entry>
     <title></title>
-    <url>https://lllllmaster-lulllll.github.io/2022/02/08/conda%E8%AE%BE%E7%BD%AE/</url>
+    <url>/2022/02/08/conda%E8%AE%BE%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="conda-常用设置"><a href="#conda-常用设置" class="headerlink" title="conda 常用设置"></a>conda 常用设置</h1><h2 id="conda-关闭默认启动环境（base）"><a href="#conda-关闭默认启动环境（base）" class="headerlink" title="conda 关闭默认启动环境（base）"></a>conda 关闭默认启动环境（base）</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda config --set auto_activate_base false</span><br></pre></td></tr></table></figure>
 
 <h2 id="conda切换国内源-中科大"><a href="#conda切换国内源-中科大" class="headerlink" title="conda切换国内源(中科大)"></a>conda切换国内源(中科大)</h2><h4 id="shell-环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）"><a href="#shell-环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）" class="headerlink" title="shell 环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）"></a>shell 环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</span><br><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
@@ -144,7 +144,7 @@
   </entry>
   <entry>
     <title></title>
-    <url>https://lllllmaster-lulllll.github.io/2022/02/08/go%20%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
+    <url>/2022/02/08/go%20%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h1 id="go-语言环境安装"><a href="#go-语言环境安装" class="headerlink" title="go 语言环境安装"></a>go 语言环境安装</h1><h4 id="1-下载go安装包"><a href="#1-下载go安装包" class="headerlink" title="1. 下载go安装包"></a>1. 下载go安装包</h4><p>官网下载go安装包： <a href="https://golang.google.cn/dl/">https://golang.google.cn/dl/</a></p>
 <p>下载go二进制包<code>go1.16.2.darwin-amd64.tar.gz</code></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget -c https://golang.google.cn/dl/go1.16.2.darwin-amd64.tar.gz</span><br></pre></td></tr></table></figure>
