@@ -224,6 +224,9 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;message&quot;: &quot;pong&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
   </entry>
   <entry>
     <title>客户信息管理系统</title>
@@ -286,6 +289,9 @@
 
 
 ]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
   </entry>
   <entry>
     <title>go 语言_命令行参数</title>
@@ -303,6 +309,9 @@
 <p><strong>实现效果</strong></p>
 <p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202101713619.png" alt="image-20220210171339559"></p>
 ]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
   </entry>
   <entry>
     <title>goroutine 和 channel</title>
@@ -545,6 +554,9 @@
 <li></li>
 </ol>
 ]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
   </entry>
   <entry>
     <title>家庭收支记账软件项目</title>
@@ -604,6 +616,9 @@
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;go_code/chapter12/utils&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> fa = utils.NewFamilyAccount()</span><br><span class="line">	fa.MainMenu()</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
   </entry>
   <entry>
     <title>Redis</title>
@@ -651,6 +666,9 @@
 
 
 ]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
   </entry>
   <entry>
     <title>Go_json</title>
@@ -690,6 +708,9 @@
 
 <h3 id="代码结果："><a href="#代码结果：" class="headerlink" title="代码结果："></a>代码结果：</h3><p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202102317297.png" alt="image-20220210231713125"></p>
 ]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
   </entry>
   <entry>
     <title>第 14 章 文件操作</title>
@@ -800,6 +821,9 @@
 
 
 ]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
   </entry>
   <entry>
     <title>Go 语言第 17 章 反射</title>
@@ -911,6 +935,9 @@
 
 
 ]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
   </entry>
   <entry>
     <title>第 18 章 `TCP` 编程</title>
@@ -1028,6 +1055,9 @@
 
 
 ]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
   </entry>
   <entry>
     <title>Go 语言第 15 章 单元测试</title>
@@ -1145,6 +1175,9 @@
 
 
 ]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
   </entry>
   <entry>
     <title>继承和接口的区别</title>
@@ -1155,6 +1188,9 @@
 
 
 ]]></content>
+      <categories>
+        <category>golang</category>
+      </categories>
   </entry>
   <entry>
     <title>Hello World</title>

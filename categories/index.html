@@ -6,27 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lllllmaster-lulllll.github.io">
-  <title>第 18 章 `TCP` 编程 | 曙光的博客</title>
+  <title>文章分类 | 曙光的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="第 18 章 TCP 编程网络编程基本介绍Golang的主要设计目标之一就是面向大规模 务端 程序必不可少也是至关重要的一部分。  网络编程有两种:   TCP socket编程，是网络编程的主流。之所以叫Tcp socket编程，是因为底层是 基于Tcp&#x2F;ip协议的. 比如: QQ聊天 [示意图]  b&#x2F;s结构的http编程，我们使用浏览器去访问服务器时，使用的就是http协">
-<meta property="og:type" content="article">
-<meta property="og:title" content="第 18 章 &#96;TCP&#96; 编程">
-<meta property="og:url" content="https://lllllmaster-lulllll.github.io/2022/03/02/Go%E8%AF%AD%E8%A8%80%E7%AC%AC%2018_tcp%E7%BC%96%E7%A8%8B/index.html">
+  <meta name="description" content="坚持把简单的事情做好就是不简单,坚持把平凡的事情做好就是不平凡">
+<meta property="og:type" content="website">
+<meta property="og:title" content="文章分类">
+<meta property="og:url" content="https://lllllmaster-lulllll.github.io/categories/index.html">
 <meta property="og:site_name" content="曙光的博客">
-<meta property="og:description" content="第 18 章 TCP 编程网络编程基本介绍Golang的主要设计目标之一就是面向大规模 务端 程序必不可少也是至关重要的一部分。  网络编程有两种:   TCP socket编程，是网络编程的主流。之所以叫Tcp socket编程，是因为底层是 基于Tcp&#x2F;ip协议的. 比如: QQ聊天 [示意图]  b&#x2F;s结构的http编程，我们使用浏览器去访问服务器时，使用的就是http协">
+<meta property="og:description" content="坚持把简单的事情做好就是不简单,坚持把平凡的事情做好就是不平凡">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202142105516.png">
-<meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202142106166.png">
-<meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202142138320.png">
-<meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202142147948.png">
-<meta property="article:published_time" content="2022-03-02T14:26:25.000Z">
-<meta property="article:modified_time" content="2022-03-02T14:50:04.756Z">
+<meta property="article:published_time" content="2022-03-02T14:41:55.000Z">
+<meta property="article:modified_time" content="2022-03-02T14:48:42.521Z">
 <meta property="article:author" content="Aurora">
 <meta property="article:tag" content="编程,篮球,音乐,电影,音乐,电脑使用技巧">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202142105516.png">
   
     <link rel="alternative" href="/atom.xml" title="曙光的博客" type="application/atom+xml">
   
@@ -254,14 +249,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Go语言第 18_tcp编程" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      第 18 章 `TCP` 编程
+      文章分类
     </h1>
   
 
@@ -273,8 +268,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2022/03/02/Go%E8%AF%AD%E8%A8%80%E7%AC%AC%2018_tcp%E7%BC%96%E7%A8%8B/" class="archive-article-date">
-        <time datetime="2022-03-02T14:26:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-02</time>
+<a href="/categories/index.html" class="archive-article-date">
+        <time datetime="2022-03-02T14:41:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-02</time>
 </a>
 
   
@@ -287,7 +282,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.2k字</span>
+      <span class="post-count">0字</span>
     </span>
   </span>
 
@@ -296,7 +291,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">5分</span>
+      <span class="post-count">1分</span>
     </span>
   </span>
 </div>
@@ -307,119 +302,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="第-18-章-TCP-编程"><a href="#第-18-章-TCP-编程" class="headerlink" title="第 18 章 TCP 编程"></a>第 18 章 <code>TCP</code> 编程</h1><h2 id="网络编程基本介绍"><a href="#网络编程基本介绍" class="headerlink" title="网络编程基本介绍"></a>网络编程基本介绍</h2><p>Golang的主要设计目标之一就是面向大规模 务端 程序必不可少也是至关重要的一部分。 </p>
-<p>网络编程有两种: </p>
-<ol>
-<li>TCP socket编程，是网络编程的主流。之所以叫Tcp socket编程，是因为底层是 基于Tcp&#x2F;ip协议的. 比如: QQ聊天 [示意图] </li>
-<li>b&#x2F;s结构的http编程，我们使用浏览器去访问服务器时，使用的就是http协议， 而http底层依旧是用tcp socket实现的。[示意图] 比如: 京东商城 【这属于go web开发 范畴</li>
-</ol>
-<h3 id="网线，网卡，五险网卡"><a href="#网线，网卡，五险网卡" class="headerlink" title="网线，网卡，五险网卡"></a>网线，网卡，五险网卡</h3><p>计算机之间要相互通讯，必须要求网线，网卡，或者是无线网卡</p>
-<h2 id="网络编程基础知识"><a href="#网络编程基础知识" class="headerlink" title="网络编程基础知识"></a>网络编程基础知识</h2><h3 id="协议-tcp-x2F-ip"><a href="#协议-tcp-x2F-ip" class="headerlink" title="协议(tcp&#x2F;ip)"></a>协议(tcp&#x2F;ip)</h3><p>TCP&#x2F;IP（Transmission Control Protocol&#x2F;Internet Protocol)的简写,中文译名为传输控制 协议&#x2F;因特网互联协议，又叫网络通讯协议，这个协议是Internet最基本的协议、 Internet国际互联网络的基础，简单地说，就是由网络层的IP协议和传输层的TCP协 议组成的。</p>
-<p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202142105516.png" alt="image-20220214210526344"></p>
-<p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202142106166.png" alt="image-20220214210603112"></p>
-<h3 id="端口介绍"><a href="#端口介绍" class="headerlink" title="端口介绍"></a>端口介绍</h3><p>我们这里所指的端口不是指物理意义上的端口，而是特指TCP&#x2F;IP协议中的端口，是 逻辑意义上的端口。 如果把IP地址比作一间房子，端口就是出入这间房子的门。真正的房子只有几个 门，但是一个IP地址的端口可以有65536（即：256×256）个之多！端口是通过端口号来标记的，端口号只有整数，范围是从o到65535（256×256-1）</p>
-<h3 id="端口-port-分类"><a href="#端口-port-分类" class="headerlink" title="端口(port)-分类"></a>端口(port)-分类</h3><ol>
-<li><p>0号是保留端口. </p>
-</li>
-<li><p>1-1024是固定端口 </p>
-<p>又叫有名端口,即被某些程序固定使用,一般程序员不使用. </p>
-<p>22: SSH远程登录协议 23: teinet使用  21:ftp使用 </p>
-<p>25: smtp服务使用 80:iis使用 7:echo服务 </p>
-</li>
-<li><p>1025-65535是动态端口 P 这些端口，程序员可以使用.</p>
-</li>
-</ol>
-<h3 id="端口-port-使用注意"><a href="#端口-port-使用注意" class="headerlink" title="端口(port)-使用注意"></a>端口(port)-使用注意</h3><p>在计算机(尤其是做服务器)要尽可能的少 开端口 一个端口只能被一个程序监听 如果使用netstat -an可以查看本机有哪些端口在监听 可以使用netstat -anb 来查看监听端口的pid,在结合任务管理器关闭不安全的端口.</p>
-<h2 id="tcp-socket-编程的客户端和服务器端（快速入门）"><a href="#tcp-socket-编程的客户端和服务器端（快速入门）" class="headerlink" title="tcp socket 编程的客户端和服务器端（快速入门）"></a>tcp socket 编程的客户端和服务器端（快速入门）</h2><p>为了授课方法，我们将tcp socket编程，简称 socket编程. 下图为Golang socket编程中客户端和服务器的网络分布</p>
-<img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202142138320.png" alt="image-20220214213848190" style="zoom:67%;" />
-
-<h3 id="服务端的处理流程"><a href="#服务端的处理流程" class="headerlink" title="服务端的处理流程"></a>服务端的处理流程</h3><ol>
-<li>监听端口 </li>
-<li>接收客户端的tcp链接，建立客户端和服务器端的链接. </li>
-<li>创建goroutine，处理该链接的请求(通常客户端会通过链接发送请求包)</li>
-</ol>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;io&quot;</span></span><br><span class="line">	<span class="string">&quot;net&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">process</span><span class="params">(conn net.Conn)</span></span> &#123;</span><br><span class="line">	<span class="comment">//循环接收客户端数据</span></span><br><span class="line">	<span class="keyword">defer</span> conn.Close() <span class="comment">//关闭 conn</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		<span class="comment">//创建一个新的切片</span></span><br><span class="line">		buf := <span class="built_in">make</span>([]<span class="type">byte</span>, <span class="number">1024</span>)</span><br><span class="line">		<span class="comment">//conn.Read(buf)</span></span><br><span class="line">		<span class="comment">//等待客户端通过 conn 发送信息</span></span><br><span class="line">		<span class="comment">//如果客户端没有 write 发送,那么协程阻塞</span></span><br><span class="line">		fmt.Printf(<span class="string">&quot;服务器在等待客户端 %s 发送信息&quot;</span>, conn.RemoteAddr().String())</span><br><span class="line">		n, err := conn.Read(buf)</span><br><span class="line">		<span class="keyword">if</span> err == io.EOF &#123;</span><br><span class="line">			fmt.Println(<span class="string">&quot;客户端退出&quot;</span>)</span><br><span class="line">			<span class="keyword">return</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//显示客户端发送的内容到服务器的终端</span></span><br><span class="line">		fmt.Print(<span class="type">string</span>(buf[:n]))</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;服务器开始监听...&quot;</span>)</span><br><span class="line">	listen, err := net.Listen(<span class="string">&quot;tcp&quot;</span>, <span class="string">&quot;0.0.0.0:9876&quot;</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;listen err=&quot;</span>, err)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">defer</span> listen.Close() <span class="comment">//延时关闭 listen</span></span><br><span class="line">	<span class="comment">//循环等待客户端来链接我</span></span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		<span class="comment">//等待客户端连接</span></span><br><span class="line">		fmt.Println(<span class="string">&quot;等待客户端来连接&quot;</span>)</span><br><span class="line">		conn, err := listen.Accept()</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			fmt.Println(<span class="string">&quot;Accept() err=&quot;</span>, err)</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			fmt.Println(<span class="string">&quot;连接成功&quot;</span>)</span><br><span class="line">			fmt.Printf(<span class="string">&quot;Accept() suc conn=%v 客户端 ip=%v\n&quot;</span>, conn, conn.RemoteAddr())</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//这里准备起一个协程,为客户端服务</span></span><br><span class="line">		<span class="keyword">go</span> process(conn)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// fmt.Printf(&quot;listen suc=%v\n&quot;, listen)</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="客户端的处理流程"><a href="#客户端的处理流程" class="headerlink" title="客户端的处理流程"></a>客户端的处理流程</h3><ol>
-<li>建立与服务端的链接 </li>
-<li>发送请求数据，接收服务器端返回的结果数据</li>
-<li>关闭链接</li>
-</ol>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;bufio&quot;</span></span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;net&quot;</span></span><br><span class="line">	<span class="string">&quot;os&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	conn, err := net.Dial(<span class="string">&quot;tcp&quot;</span>, <span class="string">&quot;192.168.69.169:9876&quot;</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;client dial err=&quot;</span>, err)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Println(<span class="string">&quot;conn 成功&quot;</span>, conn)</span><br><span class="line">	<span class="comment">//功能一:客户端发送单行数据,然后就退出</span></span><br><span class="line">	reader := bufio.NewReader(os.Stdin) <span class="comment">//标准输入</span></span><br><span class="line">	<span class="comment">//从终端读取一行用户输入,并发送给服务器</span></span><br><span class="line">	line, err := reader.ReadString(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;readString err=&quot;</span>, err)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//再将 line 发送给服务器</span></span><br><span class="line">	n, err := conn.Write([]<span class="type">byte</span>(line))</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;conn.Write err:&quot;</span>, err)</span><br><span class="line">	&#125;</span><br><span class="line">	fmt.Printf(<span class="string">&quot;客户端发送了 %d 字节的数据,并退出\n&quot;</span>, n)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="简单的程序示意图"><a href="#简单的程序示意图" class="headerlink" title="简单的程序示意图"></a>简单的程序示意图</h3><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202142147948.png" alt="image-20220214214716830" style="zoom:67%;" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     
 
     
@@ -455,7 +338,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://lllllmaster-lulllll.github.io/2022/03/02/Go语言第 18_tcp编程/" title="第 18 章 `TCP` 编程" target="_blank">https://lllllmaster-lulllll.github.io/2022/03/02/Go语言第 18_tcp编程/</a>
+          <a href="https://lllllmaster-lulllll.github.io/categories/index.html" title="文章分类" target="_blank">https://lllllmaster-lulllll.github.io/categories/index.html</a>
         </li>
         
         <li>
@@ -473,17 +356,6 @@
     
     
     
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/golang//" class="article-tag-list-link color2">golang</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
     
 
@@ -533,7 +405,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://lllllmaster-lulllll.github.io/2022/03/02/Go%E8%AF%AD%E8%A8%80%E7%AC%AC%2018_tcp%E7%BC%96%E7%A8%8B/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://lllllmaster-lulllll.github.io/categories/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -545,25 +417,6 @@
   </div>
 </article>
 
-
-<nav id="article-nav">
-  
-    <a href="/2022/03/02/Go%E8%AF%AD%E8%A8%80%E7%AC%AC%2017%20%E7%AB%A0%20%E5%8F%8D%E5%B0%84/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Go 语言第 17 章 反射
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2022/03/02/Go%20%E8%AF%AD%E8%A8%80%E7%AC%AC%2015%20%E7%AB%A0%20%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Go 语言第 15 章 单元测试</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
 
 
 <aside class="wrap-side-operation">
@@ -633,7 +486,7 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
