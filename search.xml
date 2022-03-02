@@ -1211,11 +1211,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/03/02/newfile/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>mac 安装使用 redis</title>
     <url>/2022/03/02/mac%20%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%20redis/</url>
     <content><![CDATA[<h1 id="mac-安装使用-redis"><a href="#mac-安装使用-redis" class="headerlink" title="mac 安装使用 redis"></a>mac 安装使用 redis</h1><p><strong>使用 brew 安装 redis</strong></p>
