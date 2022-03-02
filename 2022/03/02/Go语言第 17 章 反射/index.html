@@ -6,24 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lllllmaster-lulllll.github.io">
-  <title>曙光的博客</title>
+  <title>Go 语言第 17 章 反射 | 曙光的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Mac 卸载annconda第一步，删除Anaconda的配置，命令如下12conda install anaconda-cleananaconda-clean  删除备份1rm -r &#x2F;Users&#x2F;aurora&#x2F;.anaconda_backup&#x2F;2022-02-08T193117  注：命令中黑色文字就是上图中的 Backup directory，直接复制替换即可 第二步，删除Anaconda的">
+  <meta name="description" content="Go 语言第 17 章 反射需求结构体序列化和反序列化  新问题：桥连接 定义了两个匿名函数 123456test1:&#x3D;func(v1 int, v2 int)&amp;#123;  t.Log(v1,v2)&amp;#125;test2:&#x3D;func(v1 int, v2 int, s string)&amp;#123;  t.Log(v1,v2,s)&amp;#125;  定义一个适配器函数用作统一处理接口，其大致结构如下：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="曙光的博客">
-<meta property="og:url" content="https://lllllmaster-lulllll.github.io/2022/02/08/Mac%20%E5%8D%B8%E8%BD%BDannconda/index.html">
+<meta property="og:title" content="Go 语言第 17 章 反射">
+<meta property="og:url" content="https://lllllmaster-lulllll.github.io/2022/03/02/Go%E8%AF%AD%E8%A8%80%E7%AC%AC%2017%20%E7%AB%A0%20%E5%8F%8D%E5%B0%84/index.html">
 <meta property="og:site_name" content="曙光的博客">
-<meta property="og:description" content="Mac 卸载annconda第一步，删除Anaconda的配置，命令如下12conda install anaconda-cleananaconda-clean  删除备份1rm -r &#x2F;Users&#x2F;aurora&#x2F;.anaconda_backup&#x2F;2022-02-08T193117  注：命令中黑色文字就是上图中的 Backup directory，直接复制替换即可 第二步，删除Anaconda的">
+<meta property="og:description" content="Go 语言第 17 章 反射需求结构体序列化和反序列化  新问题：桥连接 定义了两个匿名函数 123456test1:&#x3D;func(v1 int, v2 int)&amp;#123;  t.Log(v1,v2)&amp;#125;test2:&#x3D;func(v1 int, v2 int, s string)&amp;#123;  t.Log(v1,v2,s)&amp;#125;  定义一个适配器函数用作统一处理接口，其大致结构如下：">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202081949496.png">
-<meta property="article:published_time" content="2022-02-08T11:51:32.321Z">
-<meta property="article:modified_time" content="2022-02-08T11:51:32.321Z">
+<meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202122044093.png">
+<meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202131452666.png">
+<meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202131412306.png">
+<meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202131554216.png">
+<meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202131554859.png">
+<meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202132002322.png">
+<meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202132047782.png">
+<meta property="article:published_time" content="2022-03-02T14:26:25.000Z">
+<meta property="article:modified_time" content="2022-03-02T14:30:38.530Z">
 <meta property="article:author" content="Aurora">
 <meta property="article:tag" content="编程,篮球,音乐,电影,音乐,电脑使用技巧">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202081949496.png">
+<meta name="twitter:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202122044093.png">
   
     <link rel="alternative" href="/atom.xml" title="曙光的博客" type="application/atom+xml">
   
@@ -251,26 +257,165 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Mac 卸载annconda" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Go语言第 17 章 反射" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+  
+  
+    <h1 class="article-title" itemprop="name">
+      Go 语言第 17 章 反射
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/03/02/Go%E8%AF%AD%E8%A8%80%E7%AC%AC%2017%20%E7%AB%A0%20%E5%8F%8D%E5%B0%84/" class="archive-article-date">
+        <time datetime="2022-03-02T14:26:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-02</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.7k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">7分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="Mac-卸载annconda"><a href="#Mac-卸载annconda" class="headerlink" title="Mac 卸载annconda"></a>Mac 卸载annconda</h1><h2 id="第一步，删除Anaconda的配置，命令如下"><a href="#第一步，删除Anaconda的配置，命令如下" class="headerlink" title="第一步，删除Anaconda的配置，命令如下"></a>第一步，删除<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=Anaconda&spm=1001.2101.3001.7020">Anaconda</a>的配置，命令如下</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda install anaconda-clean</span><br><span class="line">anaconda-clean</span><br></pre></td></tr></table></figure>
+    <h1 id="Go-语言第-17-章-反射"><a href="#Go-语言第-17-章-反射" class="headerlink" title="Go 语言第 17 章 反射"></a>Go 语言第 17 章 反射</h1><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><h3 id="结构体序列化和反序列化"><a href="#结构体序列化和反序列化" class="headerlink" title="结构体序列化和反序列化"></a>结构体序列化和反序列化</h3><p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202122044093.png" alt="image-20220212204437940"></p>
+<hr>
+<h3 id="新问题：桥连接"><a href="#新问题：桥连接" class="headerlink" title="新问题：桥连接"></a>新问题：桥连接</h3><ol>
+<li><p>定义了两个匿名函数</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">test1:=<span class="function"><span class="keyword">func</span><span class="params">(v1 <span class="type">int</span>, v2 <span class="type">int</span>)</span></span>&#123;</span><br><span class="line">  t.Log(v1,v2)</span><br><span class="line">&#125;</span><br><span class="line">test2:=<span class="function"><span class="keyword">func</span><span class="params">(v1 <span class="type">int</span>, v2 <span class="type">int</span>, s <span class="type">string</span>)</span></span>&#123;</span><br><span class="line">  t.Log(v1,v2,s)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>定义一个适配器函数用作统一处理接口，其大致结构如下：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bridge:=<span class="function"><span class="keyword">func</span><span class="params">(call <span class="keyword">interface</span>&#123;&#125;,args ...<span class="keyword">interface</span>&#123;&#125;)</span></span>&#123;</span><br><span class="line">  <span class="comment">//内容</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//实现调用 test1 对应的函数</span></span><br><span class="line">bridge(test1,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line"><span class="comment">//实现调用 test1 对应的函数</span></span><br><span class="line">bridge(test2,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&quot;test2&quot;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>要求只用反射机制完成（note：学习 reflect 后，回头来解决）</p>
+</li>
+</ol>
+<h2 id="反射的基本介绍"><a href="#反射的基本介绍" class="headerlink" title="反射的基本介绍"></a>反射的基本介绍</h2><h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><ol>
+<li>反射可以在运行时动态获取变量的各种信息，比如变量的类型(type)，类别(kind) </li>
+<li>如果是结构体变量，还可以获取到结构体本身的信息(包括结构体的字段、方法) </li>
+<li>通过反射，可以修改变量的值，可以调用关联的方法。 </li>
+<li>使用反射，需要import(“reflect”)</li>
+<li>示意图</li>
+</ol>
+<p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202131452666.png" alt="image-20220213145229548"></p>
+<p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202131412306.png" alt="image-20220213141240157"></p>
+<hr>
+<h3 id="反射的应用场景"><a href="#反射的应用场景" class="headerlink" title="反射的应用场景"></a>反射的应用场景</h3><ol>
+<li>不知道接口调用哪个函数，根据传入参数在运行时确定调用的具体接口，这种需要对函数或方法反射。例如以下这种桥接模式, 比如前面提出问题。 func t (funcptr interface{}, iterface{}) 第一个参数funcPtr以接口的形式传入函数指针，函数参数args以可变参数的形 式传入，bridge函数中可以用反射来动态执行funcPtr函数</li>
+<li>对结构体序列化时，如果结构体有指定的Tag，也会使用到反射生成对应的字符串</li>
+</ol>
+<h3 id="反射重要的函数和概念"><a href="#反射重要的函数和概念" class="headerlink" title="反射重要的函数和概念"></a>反射重要的函数和概念</h3><ol>
+<li><p>reflect.TypeOf(变量名)，获取变量的类型，返回reflect.Type类型 </p>
+</li>
+<li><p>reflect.ValueOf(变量名)，获取变量的值，返回reflect.Value类型reflect.Value 是一个 结构体类型。 【看文档】，通过reflect.Value， 可以获取到关于该变量的很多信息。</p>
+</li>
+<li><p>变量、interface{} 和reflect.Value是可以相互转换的，这点在实际开发中，会经常使 用到。画出示意图</p>
+<p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202131554216.png" alt="image-20220213155419077"></p>
+<p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202131554859.png" alt="image-20220213155439779"></p>
+</li>
+</ol>
+<h2 id="反射的快速入门"><a href="#反射的快速入门" class="headerlink" title="反射的快速入门"></a>反射的快速入门</h2><h3 id="快速入门说明"><a href="#快速入门说明" class="headerlink" title="快速入门说明"></a>快速入门说明</h3><ol>
+<li><p>请编写一个案例演示对(基本数据类型、 interface{}、reflect.Value)进行反射的基本操作。<br><strong>代码演示</strong></p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;reflect&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">//专门演示反射</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reflectTest01</span><span class="params">(b <span class="keyword">interface</span>&#123;&#125;)</span></span> &#123;</span><br><span class="line">	<span class="comment">//通过反射获取传入变量的ype kind value</span></span><br><span class="line">	<span class="comment">//先获取 reflect.Type()</span></span><br><span class="line">	rType := reflect.TypeOf(b)</span><br><span class="line">	fmt.Println(<span class="string">&quot;rType=&quot;</span>, rType)</span><br><span class="line">	<span class="comment">//获取到 reflect.Value</span></span><br><span class="line">	rVal := reflect.ValueOf(b)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//进行加减</span></span><br><span class="line">	n2 := <span class="number">2</span> + rVal.Int()</span><br><span class="line">	fmt.Println(<span class="string">&quot;n2=&quot;</span>, n2)</span><br><span class="line">	fmt.Println(<span class="string">&quot;rVal=&quot;</span>, rVal)</span><br><span class="line">	<span class="comment">//将 rVal 转成 interface&#123;&#125;</span></span><br><span class="line">	iV := rVal.Interface()</span><br><span class="line">	<span class="comment">//将 interface 通过断言转成需要的类型</span></span><br><span class="line">	num2 := iV.(<span class="type">int</span>)</span><br><span class="line">	fmt.Println(<span class="string">&quot;num2=&quot;</span>, num2)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">//请编写一个案例演示对(基本数据类型、 interface&#123;&#125;、reflect.Value)进行反射的基本操作</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> num <span class="type">int</span> = <span class="number">100</span></span><br><span class="line">	reflectTest01(num)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>请编写一个案例，演示对(结构体类型、interface[}、reflect.Value)进行反射的基本操 作。 </p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;reflect&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">//专门演示反射</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reflectTest01</span><span class="params">(b <span class="keyword">interface</span>&#123;&#125;)</span></span> &#123;</span><br><span class="line">	<span class="comment">//通过反射获取传入变量的ype kind value</span></span><br><span class="line">	<span class="comment">//先获取 reflect.Type()</span></span><br><span class="line">	rType := reflect.TypeOf(b)</span><br><span class="line">	fmt.Println(<span class="string">&quot;rType=&quot;</span>, rType)</span><br><span class="line">	<span class="comment">//获取到 reflect.Value</span></span><br><span class="line">	rVal := reflect.ValueOf(b)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//进行加减</span></span><br><span class="line">	n2 := <span class="number">2</span> + rVal.Int()</span><br><span class="line">	fmt.Println(<span class="string">&quot;n2=&quot;</span>, n2)</span><br><span class="line">	fmt.Println(<span class="string">&quot;rVal=&quot;</span>, rVal)</span><br><span class="line">	<span class="comment">//将 rVal 转成 interface&#123;&#125;</span></span><br><span class="line">	iV := rVal.Interface()</span><br><span class="line">	<span class="comment">//将 interface 通过断言转成需要的类型</span></span><br><span class="line">	num2 := iV.(<span class="type">int</span>)</span><br><span class="line">	fmt.Println(<span class="string">&quot;num2=&quot;</span>, num2)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//专门演示对结构体的反射</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reflectTest02</span><span class="params">(b <span class="keyword">interface</span>&#123;&#125;)</span></span> &#123;</span><br><span class="line">	<span class="comment">//通过反射获取传入变量的ype kind value</span></span><br><span class="line">	<span class="comment">//先获取 reflect.Type()</span></span><br><span class="line">	rType := reflect.TypeOf(b)</span><br><span class="line">	fmt.Println(<span class="string">&quot;rType=&quot;</span>, rType)</span><br><span class="line">	<span class="comment">//获取到 reflect.Value</span></span><br><span class="line">	rVal := reflect.ValueOf(b)</span><br><span class="line"></span><br><span class="line">	<span class="comment">//将 rVal 转成 interface&#123;&#125;</span></span><br><span class="line">	iV := rVal.Interface()</span><br><span class="line">	fmt.Printf(<span class="string">&quot;iV = %v iV = %T\n&quot;</span>, iV, iV)</span><br><span class="line">	<span class="comment">//将 interface&#123;&#125;通过断言转成需要的类型</span></span><br><span class="line">	<span class="comment">//简单使用类型检查</span></span><br><span class="line">	stu, ok := iV.(Student)</span><br><span class="line">	<span class="keyword">if</span> ok &#123;</span><br><span class="line">		fmt.Printf(<span class="string">&quot;stu.Name=%v\n&quot;</span>, stu.Name)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Student <span class="keyword">struct</span> &#123;</span><br><span class="line">	Name <span class="type">string</span></span><br><span class="line">	Age  <span class="type">int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">//请编写一个案例演示对(基本数据类型、 interface&#123;&#125;、reflect.Value)进行反射的基本操作</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// var num int = 100</span></span><br><span class="line">	<span class="comment">// reflectTest01(num)</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//定义一个 Student 的实例</span></span><br><span class="line">	stu := Student&#123;</span><br><span class="line">		Name: <span class="string">&quot;Tom&quot;</span>,</span><br><span class="line">		Age:  <span class="number">8</span>,</span><br><span class="line">	&#125;</span><br><span class="line">	reflectTest02(stu)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="反射注意事项和细节说明"><a href="#反射注意事项和细节说明" class="headerlink" title="反射注意事项和细节说明"></a>反射注意事项和细节说明</h2><ol>
+<li><p>reflect.Value.Kind,获取变量的类别，返回的是一个常量</p>
+<img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202132002322.png" alt="image-20220213200201178" style="zoom: 67%;" />
 
-<h3 id="删除备份"><a href="#删除备份" class="headerlink" title="删除备份"></a>删除备份</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -r /Users/aurora/.anaconda_backup/2022-02-08T193117</span><br></pre></td></tr></table></figure>
+<p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202132047782.png" alt="image-20220213204709609"></p>
+</li>
+<li><p>Type是类型, Kind是类别， Type 和 Kind 可能是相同的，也可能是不同的. </p>
+<ol>
+<li>比如: var num int &#x3D; 10 num的Type是int，Kind也是int . </li>
+<li>比如: var stu Student stu的Type是 <strong>包名.Student</strong> , Kind是<strong>struct</strong></li>
+</ol>
+</li>
+<li><p>通过反射可以在让变量在interface{} 和Reflect.Value之间相互转换, 这点在前面画 过示意图并在快速入门案例中讲解过,这里我们看下是如何在代码中体现的.</p>
+</li>
+<li><p>使用反射的方式来获取变量的值(<font color="red">并返回对应的类型</font>)，要求数据类型匹配 ，比如x是int, 那么就应该使用 reflect.Value(x)IInt(),而不能使用其它的，否则报panic</p>
+</li>
+<li><p>通过反射来修改变量，注意当使用SetXxx方法来设置需要通过对应的指针类型来完成，这样才能改变传入的变量的值，同时需要使用到 reflect.Value.Elem()方法</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;reflect&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment">//通过反射,修改 num int 的值  修改 student 的值</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">reflect01</span><span class="params">(b <span class="keyword">interface</span>&#123;&#125;)</span></span> &#123;</span><br><span class="line">	<span class="comment">//2. 获取到 reflect.Value</span></span><br><span class="line">	rVal := reflect.ValueOf(b)</span><br><span class="line">	rVal.Elem().SetInt(<span class="number">20</span>)</span><br><span class="line">	fmt.Printf(<span class="string">&quot;rVal kind=%v\n&quot;</span>, rVal.Kind())</span><br><span class="line">	<span class="comment">// fmt.Println(rVal)</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> num <span class="type">int</span> = <span class="number">10</span></span><br><span class="line">	reflect01(&amp;num)</span><br><span class="line">	fmt.Println(num)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="反射的最佳实践"><a href="#反射的最佳实践" class="headerlink" title="反射的最佳实践"></a>反射的最佳实践</h2><h3 id="1-使用反射来遍历结构体的字段，调用结构体的方法，并获取结构体标签的值"><a href="#1-使用反射来遍历结构体的字段，调用结构体的方法，并获取结构体标签的值" class="headerlink" title="1. 使用反射来遍历结构体的字段，调用结构体的方法，并获取结构体标签的值"></a>1. 使用反射来遍历结构体的字段，调用结构体的方法，并获取结构体标签的值</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;reflect&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Monster <span class="keyword">struct</span> &#123;</span><br><span class="line">	Name  <span class="type">string</span>  <span class="string">`json:&quot;monster_name&quot;`</span></span><br><span class="line">	Age   <span class="type">int</span>     <span class="string">`json:&quot;monster_age&quot;`</span></span><br><span class="line">	Score <span class="type">float64</span> <span class="string">`json:&quot;monster_score&quot;`</span></span><br><span class="line">	Sex   <span class="type">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s Monster)</span></span> Print() &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;----------start----------&quot;</span>)</span><br><span class="line">	fmt.Println(s)</span><br><span class="line">	fmt.Println(<span class="string">&quot;-----------end-----------&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s Monster)</span></span> GetSum(n1, n2 <span class="type">int</span>) <span class="type">int</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> n1 + n2</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(s Monster)</span></span> Set(name <span class="type">string</span>, age <span class="type">int</span>, score <span class="type">float64</span>, sex <span class="type">string</span>) &#123;</span><br><span class="line">	s.Name = name</span><br><span class="line">	s.Age = age</span><br><span class="line">	s.Score = score</span><br><span class="line">	s.Sex = sex</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestStruct</span><span class="params">(a <span class="keyword">interface</span>&#123;&#125;)</span></span> &#123;</span><br><span class="line">	typ := reflect.TypeOf(a)</span><br><span class="line">	val := reflect.ValueOf(a)</span><br><span class="line">	kd := val.Kind()</span><br><span class="line">	<span class="keyword">if</span> kd != reflect.Struct &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;expect struct&quot;</span>)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	num := val.NumField()</span><br><span class="line">	fmt.Printf(<span class="string">&quot;struct has %d fields\n&quot;</span>, num)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; num; i++ &#123;</span><br><span class="line">		fmt.Printf(<span class="string">&quot;Field %d: 值为=%v\n&quot;</span>, i, val.Field(i))</span><br><span class="line">		<span class="comment">//获取到struct标签，注意需要通过reflect.Type来获取tag标签的值</span></span><br><span class="line">		tagVal := typ.Field(i).Tag.Get(<span class="string">&quot;json&quot;</span>)</span><br><span class="line">		<span class="keyword">if</span> tagVal != <span class="string">&quot;&quot;</span> &#123;</span><br><span class="line">			fmt.Printf(<span class="string">&quot;Field %d: tag为=%v\n&quot;</span>, i, tagVal)</span><br><span class="line">		&#125;</span><br><span class="line">		numofMethod := val.NumMethod()</span><br><span class="line">		fmt.Printf(<span class="string">&quot;struct has %d methods\n&quot;</span>, numofMethod)</span><br><span class="line">		<span class="comment">//var params []reflect.Value</span></span><br><span class="line">		<span class="comment">//函数排序按照名字字母排序,A-&gt;Z</span></span><br><span class="line">		val.Method(<span class="number">1</span>).Call(<span class="literal">nil</span>)</span><br><span class="line">		<span class="comment">//调用结构体的第1个方法Method(0)</span></span><br><span class="line">		<span class="keyword">var</span> params []reflect.Value</span><br><span class="line">		params = <span class="built_in">append</span>(params, reflect.ValueOf(<span class="number">10</span>))</span><br><span class="line">		params = <span class="built_in">append</span>(params, reflect.ValueOf(<span class="number">40</span>))</span><br><span class="line">		res := val.Method(<span class="number">0</span>).Call(params) <span class="comment">//传入的参数是[]reflect.Value</span></span><br><span class="line">		fmt.Println(<span class="string">&quot;res=&quot;</span>, res[<span class="number">0</span>].Int()) <span class="comment">//返回结果,返回的结果是 []reflect.Value</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> a Monster = Monster&#123;</span><br><span class="line">		Name:  <span class="string">&quot;黄鼠狼精&quot;</span>,</span><br><span class="line">		Age:   <span class="number">400</span>,</span><br><span class="line">		Score: <span class="number">30.8</span>,</span><br><span class="line">	&#125;</span><br><span class="line">	TestStruct(a)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>注：命令中黑色文字就是上图中的 Backup directory，直接复制替换即可</strong></p>
-<h2 id="第二步，删除Anaconda的文件夹，命令如下"><a href="#第二步，删除Anaconda的文件夹，命令如下" class="headerlink" title="第二步，删除Anaconda的文件夹，命令如下"></a>第二步，删除Anaconda的文件夹，命令如下</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf ~/opt/anaconda3</span><br></pre></td></tr></table></figure>
 
-<h2 id="第三步，删除-x2F-bash-profile-也可能是其他配置文件-中anaconda的环境变量，可以使用vim打开删除"><a href="#第三步，删除-x2F-bash-profile-也可能是其他配置文件-中anaconda的环境变量，可以使用vim打开删除" class="headerlink" title="第三步，删除 ~&#x2F;.bash_profile(也可能是其他配置文件)中anaconda的环境变量，可以使用vim打开删除"></a>第三步，删除 ~&#x2F;.bash_profile(也可能是其他配置文件)中anaconda的环境变量，可以使用vim打开删除</h2><p><strong>打开terminal，输入如下命令</strong></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .bash_profile</span><br></pre></td></tr></table></figure>
 
-<h2 id="第四步，删除Anaconda的可能存在隐藏的文件"><a href="#第四步，删除Anaconda的可能存在隐藏的文件" class="headerlink" title="第四步，删除Anaconda的可能存在隐藏的文件"></a>第四步，删除Anaconda的可能存在隐藏的文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf ~/.condarc ~/.conda ~/.continuum</span><br></pre></td></tr></table></figure>
 
-<h3 id="第五步，验证"><a href="#第五步，验证" class="headerlink" title="第五步，验证"></a>第五步，验证</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">anadonca -V</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202081949496.png" alt="image-20220208194952465"></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 
@@ -307,7 +452,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://lllllmaster-lulllll.github.io/2022/02/08/Mac 卸载annconda/" title="" target="_blank">https://lllllmaster-lulllll.github.io/2022/02/08/Mac 卸载annconda/</a>
+          <a href="https://lllllmaster-lulllll.github.io/2022/03/02/Go语言第 17 章 反射/" title="Go 语言第 17 章 反射" target="_blank">https://lllllmaster-lulllll.github.io/2022/03/02/Go语言第 17 章 反射/</a>
         </li>
         
         <li>
@@ -374,7 +519,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://lllllmaster-lulllll.github.io/2022/02/08/Mac%20%E5%8D%B8%E8%BD%BDannconda/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://lllllmaster-lulllll.github.io/2022/03/02/Go%E8%AF%AD%E8%A8%80%E7%AC%AC%2017%20%E7%AB%A0%20%E5%8F%8D%E5%B0%84/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -389,15 +534,20 @@
 
 <nav id="article-nav">
   
-    <a href="/2022/02/08/conda%E8%AE%BE%E7%BD%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/03/02/Go%E8%AF%AD%E8%A8%80%E7%AC%AC%2014%20%E7%AB%A0%20%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          (no title)
+          第 14 章 文件操作
         
       </div>
     </a>
   
+  
+    <a href="/2022/03/02/Go%E8%AF%AD%E8%A8%80%E7%AC%AC%2018_tcp%E7%BC%96%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第 18 章 `TCP` 编程</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
