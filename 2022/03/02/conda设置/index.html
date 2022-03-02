@@ -19,7 +19,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202082023813.png">
 <meta property="article:published_time" content="2022-03-02T14:26:25.000Z">
-<meta property="article:modified_time" content="2022-03-02T14:33:24.584Z">
+<meta property="article:modified_time" content="2022-03-02T15:45:07.095Z">
 <meta property="article:author" content="Aurora">
 <meta property="article:tag" content="编程,篮球,音乐,电影,音乐,电脑使用技巧">
 <meta name="twitter:card" content="summary">
@@ -307,6 +307,8 @@
     <h1 id="conda-常用设置"><a href="#conda-常用设置" class="headerlink" title="conda 常用设置"></a>conda 常用设置</h1><h2 id="conda-关闭默认启动环境（base）"><a href="#conda-关闭默认启动环境（base）" class="headerlink" title="conda 关闭默认启动环境（base）"></a>conda 关闭默认启动环境（base）</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda config --set auto_activate_base false</span><br></pre></td></tr></table></figure>
 
 <h2 id="conda切换国内源-中科大"><a href="#conda切换国内源-中科大" class="headerlink" title="conda切换国内源(中科大)"></a>conda切换国内源(中科大)</h2><h4 id="shell-环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）"><a href="#shell-环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）" class="headerlink" title="shell 环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）"></a>shell 环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</span><br><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
 
 <h4 id="查看是否添加成功"><a href="#查看是否添加成功" class="headerlink" title="查看是否添加成功"></a>查看是否添加成功</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.condarc</span><br></pre></td></tr></table></figure>
 

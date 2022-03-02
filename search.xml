@@ -12,6 +12,8 @@
 <p>链接: <a href="https://pan.baidu.com/s/1yBU5YlWNqvjda7pwS_lvTg">https://pan.baidu.com/s/1yBU5YlWNqvjda7pwS_lvTg</a> 提取码: s4q4 </p>
 <p>如遇软件使用问题无法解决，请加微信：pydd156</p>
 <p>本号启用取关验证功能，取关后再次关注将无法使用部分功能，请勿轻易取关</p>
+<span id="more"></span>
+
 ]]></content>
   </entry>
   <entry>
@@ -22,6 +24,8 @@
 <h3 id="删除备份"><a href="#删除备份" class="headerlink" title="删除备份"></a>删除备份</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm -r /Users/aurora/.anaconda_backup/2022-02-08T193117</span><br></pre></td></tr></table></figure>
 
 <p><strong>注：命令中黑色文字就是上图中的 Backup directory，直接复制替换即可</strong></p>
+<span id="more"></span>
+
 <h2 id="第二步，删除Anaconda的文件夹，命令如下"><a href="#第二步，删除Anaconda的文件夹，命令如下" class="headerlink" title="第二步，删除Anaconda的文件夹，命令如下"></a>第二步，删除Anaconda的文件夹，命令如下</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">rm -rf ~/opt/anaconda3</span><br></pre></td></tr></table></figure>
 
 <h2 id="第三步，删除-x2F-bash-profile-也可能是其他配置文件-中anaconda的环境变量，可以使用vim打开删除"><a href="#第三步，删除-x2F-bash-profile-也可能是其他配置文件-中anaconda的环境变量，可以使用vim打开删除" class="headerlink" title="第三步，删除 ~&#x2F;.bash_profile(也可能是其他配置文件)中anaconda的环境变量，可以使用vim打开删除"></a>第三步，删除 ~&#x2F;.bash_profile(也可能是其他配置文件)中anaconda的环境变量，可以使用vim打开删除</h2><p><strong>打开terminal，输入如下命令</strong></p>
@@ -40,6 +44,8 @@
     <content><![CDATA[<h1 id="conda-常用设置"><a href="#conda-常用设置" class="headerlink" title="conda 常用设置"></a>conda 常用设置</h1><h2 id="conda-关闭默认启动环境（base）"><a href="#conda-关闭默认启动环境（base）" class="headerlink" title="conda 关闭默认启动环境（base）"></a>conda 关闭默认启动环境（base）</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda config --set auto_activate_base false</span><br></pre></td></tr></table></figure>
 
 <h2 id="conda切换国内源-中科大"><a href="#conda切换国内源-中科大" class="headerlink" title="conda切换国内源(中科大)"></a>conda切换国内源(中科大)</h2><h4 id="shell-环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）"><a href="#shell-环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）" class="headerlink" title="shell 环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）"></a>shell 环境下执行以下命令（一次性粘贴如果不成功，可以一行一次）</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/conda-forge/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/msys2/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/bioconda/</span><br><span class="line">conda config --add channels https://mirrors.ustc.edu.cn/anaconda/cloud/menpo/</span><br><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
 
 <h4 id="查看是否添加成功"><a href="#查看是否添加成功" class="headerlink" title="查看是否添加成功"></a>查看是否添加成功</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim ~/.condarc</span><br></pre></td></tr></table></figure>
 
@@ -143,6 +149,8 @@
 <h4 id="2-安装go"><a href="#2-安装go" class="headerlink" title="2. 安装go"></a>2. 安装go</h4><p>安装目录： <code>/usr/local/go</code></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo tar -xzvf go1.16.2.darwin-amd64.tar.gz -C /usr/local</span><br><span class="line">cd /usr/local/go</span><br></pre></td></tr></table></figure>
 
+<span id="more"></span>
+
 <p>查看go的安装目录:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /usr/local/go</span><br><span class="line">ls</span><br></pre></td></tr></table></figure>
 
@@ -244,6 +252,8 @@
 </ul>
 </li>
 </ul>
+<span id="more"></span>
+
 <h2 id="项目界面设计"><a href="#项目界面设计" class="headerlink" title="项目界面设计"></a>项目界面设计</h2><ul>
 <li><strong>主菜单界面</strong></li>
 </ul>
@@ -300,6 +310,8 @@
 <h3 id="应用案例："><a href="#应用案例：" class="headerlink" title="应用案例："></a>应用案例：</h3><h5 id="获取命令行各个参数"><a href="#获取命令行各个参数" class="headerlink" title="获取命令行各个参数"></a>获取命令行各个参数</h5><p><strong>代码实现</strong></p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;os&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	fmt.Println(<span class="string">&quot;命令行的参数有 &quot;</span>, <span class="built_in">len</span>(os.Args), <span class="string">&quot; 个&quot;</span>)</span><br><span class="line">	<span class="comment">//遍历 os.Args 切片,就可以得到所有的命令行输入参数值</span></span><br><span class="line">	<span class="keyword">for</span> i, v := <span class="keyword">range</span> os.Args &#123;</span><br><span class="line">		fmt.Printf(<span class="string">&quot;args[%v]=%v\n&quot;</span>, i, v)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<span id="more"></span>
+
 <p><strong>实现效果：</strong></p>
 <p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202101712259.png" alt="image-20220210163731339"></p>
 <h2 id="flag包用来解析命令行参数"><a href="#flag包用来解析命令行参数" class="headerlink" title="flag包用来解析命令行参数"></a><font color="00ffff"><strong>flag包用来解析命令行参数</strong></font></h2><p><strong>说明</strong>:前面的方式是比较原生的方式，对解析参数不是特别的方便，特别是带有指定 参数形式的命令行。 </p>
@@ -329,6 +341,8 @@
 <li>一个进程可以创建和销毁多个线程，同一个进程中的多个线程可以并发执行 </li>
 <li>一个程序至少有一个进程， 个进程 至少有一个线程</li>
 </ol>
+<span id="more"></span>
+
 <h3 id="程序、进程和线程的关系"><a href="#程序、进程和线程的关系" class="headerlink" title="程序、进程和线程的关系"></a>程序、进程和线程的关系</h3><p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202111931147.png" alt="image-20220211193115026"></p>
 <h3 id="并发和并行"><a href="#并发和并行" class="headerlink" title="并发和并行"></a>并发和并行</h3><ol>
 <li>多线程程序在单核上运行，就是并发 </li>
@@ -563,6 +577,8 @@
     <url>/2022/03/02/Go_12%E5%AE%B6%E5%BA%AD%E6%94%B6%E6%94%AF%E8%AE%B0%E8%B4%A6%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE/</url>
     <content><![CDATA[<h1 id="家庭收支记账软件项目"><a href="#家庭收支记账软件项目" class="headerlink" title="家庭收支记账软件项目"></a>家庭收支记账软件项目</h1><h2 id="项目开发流程说明"><a href="#项目开发流程说明" class="headerlink" title="项目开发流程说明"></a>项目开发流程说明</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    需求分析-&gt;&gt;设计阶段: 需求分析 30% 需求分析师</span><br><span class="line">    设计阶段-&gt;&gt;实现阶段: 设计阶段 20% 项目经理或者架构师</span><br><span class="line">    实现阶段-&gt;&gt;测试阶段: 实施阶段 工程师 20% </span><br><span class="line">    测试阶段--&gt;&gt;实现阶段: 测试与开发交替 测试工程师</span><br><span class="line">    测试阶段-&gt;&gt;实施阶段: 提交</span><br><span class="line">    实施阶段-&gt;&gt;维护阶段: 实施阶段 实施工程师</span><br><span class="line">    维护阶段-&gt;&gt;维护阶段: 用户发现</span><br><span class="line">  </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
 
+<span id="more"></span>
+
 <h2 id="项目需求说明"><a href="#项目需求说明" class="headerlink" title="项目需求说明"></a>项目需求说明</h2><ul>
 <li>模拟实现基本文本界面的《家庭记账软件》</li>
 <li>该软件能够记录家庭的<strong>收入</strong>、<strong>支出</strong>，并能够<strong>打印收支明细表</strong></li>
@@ -635,6 +651,8 @@
 </li>
 </ol>
 <p>setex （set with expire）</p>
+<span id="more"></span>
+
 <h3 id="看之前的-xmind-笔记"><a href="#看之前的-xmind-笔记" class="headerlink" title="看之前的 xmind 笔记"></a><font color="00ffff" ><strong>看之前的 xmind 笔记</strong></font></h3><h2 id="GO连接到-Redis"><a href="#GO连接到-Redis" class="headerlink" title="GO连接到 Redis"></a>GO连接到 Redis</h2><h3 id="安装第三方开源Redis库"><a href="#安装第三方开源Redis库" class="headerlink" title="安装第三方开源Redis库"></a>安装第三方开源Redis库</h3><ol>
 <li>使用第三方开源的redis库: <a href="https://github.com/garyburd/redigo/redis">github.com&#x2F;garyburd&#x2F;redigo&#x2F;redis</a></li>
 <li>在使用Redis前，先安装第三方Redis库，在GOPATH路径下执行安装指令: <code>go get github.com/garyburd/redigo/redis</code></li>
@@ -680,6 +698,8 @@
 <hr>
 <h2 id="json-数据格式说明"><a href="#json-数据格式说明" class="headerlink" title="json 数据格式说明"></a>json 数据格式说明</h2><p><strong>在JS 语言中，一切都是对象</strong>。因此，任何的数据类型都可以通过JSON来表示，例 如字符串、数字、对象、数组等. </p>
 <p>JSON 键值对是用来保存数据一种方式， </p>
+<span id="more"></span>
+
 <p>键&#x2F;值对组合中的键名写在前面并用双引号 “” . 包裹，使用冒号：分隔，然后紧接着值： </p>
 <p>比如: </p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span><span class="attr">&quot;firstName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Json&quot;</span><span class="punctuation">&#125;</span> </span><br></pre></td></tr></table></figure>
@@ -723,6 +743,8 @@
 <p>&#x3D;&#x3D;流：数据在数据源(文件)和程序(内存)之间经历的路径&#x3D;&#x3D;<br>&#x3D;&#x3D;输入流：数据从数据源(文件)到程序(内存)的路径&#x3D;&#x3D;<br>&#x3D;&#x3D;输出流：数据从程序(内存)到数据源(文件)的路径&#x3D;&#x3D;</p>
 <p>os.File封装所有文件相关操作，File 是一个结构体</p>
 <h2 id="打开文件和关闭文件"><a href="#打开文件和关闭文件" class="headerlink" title="打开文件和关闭文件"></a>打开文件和关闭文件</h2><h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h3><p><strong>使用函数和方法</strong></p>
+<span id="more"></span>
+
 <p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202061527788.png" alt="image-20220206152742476"></p>
 <h3 id="关闭文件"><a href="#关闭文件" class="headerlink" title="关闭文件"></a>关闭文件</h3><p><strong>使用函数和方法</strong></p>
 <p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202061530747.png" alt="image-20220206153028492"></p>
@@ -831,9 +853,13 @@
     <content><![CDATA[<h1 id="Go-语言第-17-章-反射"><a href="#Go-语言第-17-章-反射" class="headerlink" title="Go 语言第 17 章 反射"></a>Go 语言第 17 章 反射</h1><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><h3 id="结构体序列化和反序列化"><a href="#结构体序列化和反序列化" class="headerlink" title="结构体序列化和反序列化"></a>结构体序列化和反序列化</h3><p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202122044093.png" alt="image-20220212204437940"></p>
 <hr>
 <h3 id="新问题：桥连接"><a href="#新问题：桥连接" class="headerlink" title="新问题：桥连接"></a>新问题：桥连接</h3><ol>
-<li><p>定义了两个匿名函数</p>
+<li>定义了两个匿名函数</li>
+</ol>
+<span id="more"></span>
+
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line">test1:=<span class="function"><span class="keyword">func</span><span class="params">(v1 <span class="type">int</span>, v2 <span class="type">int</span>)</span></span>&#123;</span><br><span class="line">  t.Log(v1,v2)</span><br><span class="line">&#125;</span><br><span class="line">test2:=<span class="function"><span class="keyword">func</span><span class="params">(v1 <span class="type">int</span>, v2 <span class="type">int</span>, s <span class="type">string</span>)</span></span>&#123;</span><br><span class="line">  t.Log(v1,v2,s)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+
+<ol>
 <li><p>定义一个适配器函数用作统一处理接口，其大致结构如下：</p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line">bridge:=<span class="function"><span class="keyword">func</span><span class="params">(call <span class="keyword">interface</span>&#123;&#125;,args ...<span class="keyword">interface</span>&#123;&#125;)</span></span>&#123;</span><br><span class="line">  <span class="comment">//内容</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//实现调用 test1 对应的函数</span></span><br><span class="line">bridge(test1,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line"><span class="comment">//实现调用 test1 对应的函数</span></span><br><span class="line">bridge(test2,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&quot;test2&quot;</span>)</span><br></pre></td></tr></table></figure>
 </li>
@@ -949,6 +975,8 @@
 <li>b&#x2F;s结构的http编程，我们使用浏览器去访问服务器时，使用的就是http协议， 而http底层依旧是用tcp socket实现的。[示意图] 比如: 京东商城 【这属于go web开发 范畴</li>
 </ol>
 <h3 id="网线，网卡，五险网卡"><a href="#网线，网卡，五险网卡" class="headerlink" title="网线，网卡，五险网卡"></a>网线，网卡，五险网卡</h3><p>计算机之间要相互通讯，必须要求网线，网卡，或者是无线网卡</p>
+<span id="more"></span>
+
 <h2 id="网络编程基础知识"><a href="#网络编程基础知识" class="headerlink" title="网络编程基础知识"></a>网络编程基础知识</h2><h3 id="协议-tcp-x2F-ip"><a href="#协议-tcp-x2F-ip" class="headerlink" title="协议(tcp&#x2F;ip)"></a>协议(tcp&#x2F;ip)</h3><p>TCP&#x2F;IP（Transmission Control Protocol&#x2F;Internet Protocol)的简写,中文译名为传输控制 协议&#x2F;因特网互联协议，又叫网络通讯协议，这个协议是Internet最基本的协议、 Internet国际互联网络的基础，简单地说，就是由网络层的IP协议和传输层的TCP协 议组成的。</p>
 <p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202142105516.png" alt="image-20220214210526344"></p>
 <p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202142106166.png" alt="image-20220214210603112"></p>
@@ -1068,6 +1096,8 @@
 
 
 <h2 id="传统的方法"><a href="#传统的方法" class="headerlink" title="传统的方法"></a>传统的方法</h2><p><strong>传统的方式来进行测试：</strong>在 main 函数中，调用 addUpper 函数，看看实际输出的结果是否和预期的结果一致，如果一致， 则说明函数正确，否则函数有错误，然后修改错误</p>
+<span id="more"></span>
+
 <h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//一个被测试函数</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">addUpper</span><span class="params">(n <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">	res := <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">1</span>; i &lt;= n; i++ &#123;</span><br><span class="line">		res += i</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">//传统的测试方法,就是在 main 函数中使用看结果是否正确</span></span><br><span class="line">	res := addUpper(<span class="number">10</span>)</span><br><span class="line">	<span class="keyword">if</span> res != <span class="number">55</span> &#123;</span><br><span class="line">		fmt.Printf(<span class="string">&quot;addUpper错误 返回值:%v  期望值:%v\n&quot;</span>, res, <span class="number">55</span>)</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		fmt.Printf(<span class="string">&quot;addUpper正确 返回值:%v  期望值:%v\n&quot;</span>, res, <span class="number">55</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><ol>
@@ -1183,6 +1213,8 @@
     <title>继承和接口的区别</title>
     <url>/2022/03/02/go%20%E7%BB%A7%E6%89%BF%E5%92%8C%E6%8E%A5%E5%8F%A3%E5%8C%BA%E5%88%AB%20/</url>
     <content><![CDATA[<h1 id="继承和接口的区别"><a href="#继承和接口的区别" class="headerlink" title="继承和接口的区别"></a>继承和接口的区别</h1><p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/1644043521565.png" alt="接口和继承"></p>
+<span id="more"></span>
+
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TypeJudge</span><span class="params">(items ...<span class="keyword">interface</span>&#123;&#125;)</span></span> &#123;</span><br><span class="line">	<span class="keyword">for</span> index, v := <span class="keyword">range</span> items &#123;</span><br><span class="line">		<span class="keyword">switch</span> v.(<span class="keyword">type</span>) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="type">bool</span>:</span><br><span class="line">			fmt.Printf(<span class="string">&quot;第 %v 个参数是 bool 类型,值是 %v\n&quot;</span>, index+<span class="number">1</span>, v)</span><br><span class="line">		<span class="keyword">case</span> <span class="type">float32</span>:</span><br><span class="line">			fmt.Printf(<span class="string">&quot;第 %v 个参数是 float32 类型,值是 %v\n&quot;</span>, index+<span class="number">1</span>, v)</span><br><span class="line">		<span class="keyword">case</span> <span class="type">float64</span>:</span><br><span class="line">			fmt.Printf(<span class="string">&quot;第 %v 个参数是 float64 类型,值是 %v\n&quot;</span>, index+<span class="number">1</span>, v)</span><br><span class="line">		<span class="keyword">case</span> <span class="type">int</span>, <span class="type">int32</span>, <span class="type">int64</span>:</span><br><span class="line">			fmt.Printf(<span class="string">&quot;第 %v 个参数是 整数 类型,值是 %v\n&quot;</span>, index+<span class="number">1</span>, v)</span><br><span class="line">		<span class="keyword">case</span> <span class="type">string</span>:</span><br><span class="line">			fmt.Printf(<span class="string">&quot;第 %v 个参数是 string 类型,值是 %v\n&quot;</span>, index+<span class="number">1</span>, v)</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			fmt.Printf(<span class="string">&quot;第 %v 个参数类型不确定,值是 %v\n&quot;</span>, index+<span class="number">1</span>, v)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> n1 <span class="type">float32</span> = <span class="number">1.2</span></span><br><span class="line">	<span class="keyword">var</span> n2 <span class="type">float64</span> = <span class="number">2.3</span></span><br><span class="line">	<span class="keyword">var</span> n3 <span class="type">int32</span> = <span class="number">789</span></span><br><span class="line">	<span class="keyword">var</span> name <span class="type">string</span> = <span class="string">&quot;Tom&quot;</span></span><br><span class="line">	address := <span class="string">&quot;北京&quot;</span></span><br><span class="line">	n4 := <span class="number">300</span></span><br><span class="line">	TypeJudge(n1, n2, n3, name, address, n4)</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
@@ -1219,6 +1251,8 @@
 <p><strong>使用 brew 启动 redis</strong></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/opt/homebrew/opt/redis/bin/redis-server  /opt/homebrew/etc/redis.conf</span><br></pre></td></tr></table></figure>
 
+<span id="more"></span>
+
 <p><strong>使用 brew 卸载 redis</strong></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">brew uninstall redis</span><br><span class="line">//下面是一段输出信息</span><br><span class="line">//注意后两段</span><br></pre></td></tr></table></figure>
 
@@ -1245,6 +1279,8 @@
 </ol>
 </li>
 </ol>
+<span id="more"></span>
+
 <h2 id="常量使用注意事项"><a href="#常量使用注意事项" class="headerlink" title="常量使用注意事项"></a>常量使用注意事项</h2><ol>
 <li><p>比较简洁的写法</p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">  <span class="keyword">const</span>(</span><br><span class="line">    a=<span class="number">1</span></span><br><span class="line">    b=<span class="number">2</span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1279,6 +1315,8 @@
 <li>离线留言</li>
 </ol>
 <h3 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h3><h2 id="实现功能"><a href="#实现功能" class="headerlink" title="实现功能"></a>实现功能</h2><h3 id="显示客户端登陆菜单"><a href="#显示客户端登陆菜单" class="headerlink" title="显示客户端登陆菜单"></a>显示客户端登陆菜单</h3><p>功能：能够正确的显示客户端的菜单</p>
+<span id="more"></span>
+
 <h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><p><strong>Main.go</strong></p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//定义两个变量,一个是用户 id,一个用户 password</span></span><br><span class="line"><span class="keyword">var</span> (</span><br><span class="line">	userId  <span class="type">int</span></span><br><span class="line">	userPwd <span class="type">string</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">//接收用户的选择</span></span><br><span class="line">	<span class="keyword">var</span> key <span class="type">int</span></span><br><span class="line">	<span class="comment">//判断是否还继续显示菜单</span></span><br><span class="line">	<span class="keyword">var</span> loop = <span class="literal">true</span></span><br><span class="line">	<span class="keyword">for</span> loop &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;------------------------欢迎登陆多人聊天系统-----------------------&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;\t\t\t 1 登陆聊天室&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;\t\t\t 2 注册用户&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;\t\t\t 2 退出系统&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;\t\t\t 请选择 1-3:&quot;</span>)</span><br><span class="line">		fmt.Scanf(<span class="string">&quot;%d\n&quot;</span>, &amp;key)</span><br><span class="line">		<span class="keyword">switch</span> key &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			fmt.Println(<span class="string">&quot;登陆聊天室&quot;</span>)</span><br><span class="line">			loop = <span class="literal">false</span></span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			fmt.Println(<span class="string">&quot;注册用户&quot;</span>)</span><br><span class="line">			loop = <span class="literal">false</span></span><br><span class="line">		<span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">			fmt.Println(<span class="string">&quot;退出系统&quot;</span>)</span><br><span class="line">			loop = <span class="literal">false</span></span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			fmt.Println(<span class="string">&quot;输入错误,请重新输入...&quot;</span>)</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//根据用户的输入,显示新的提示信息</span></span><br><span class="line">	<span class="keyword">if</span> key == <span class="number">1</span> &#123;</span><br><span class="line">		<span class="comment">//说明用户要登录</span></span><br><span class="line">		fmt.Println(<span class="string">&quot;请输入用户的 id&quot;</span>)</span><br><span class="line">		fmt.Scanf(<span class="string">&quot;%d\n&quot;</span>, &amp;userId)</span><br><span class="line">		fmt.Println(<span class="string">&quot;请输入用户的密码&quot;</span>)</span><br><span class="line">		fmt.Scanf(<span class="string">&quot;%s\n&quot;</span>, &amp;userPwd)</span><br><span class="line">		<span class="comment">//先把登陆的函数,写到另外一个文件</span></span><br><span class="line">		err := login(userId, userPwd)</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			fmt.Println(<span class="string">&quot;登陆失败&quot;</span>)</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			fmt.Println(<span class="string">&quot;登陆成功&quot;</span>)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> key == <span class="number">2</span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;进行用户注册&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 

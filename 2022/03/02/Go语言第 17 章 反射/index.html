@@ -10,12 +10,12 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Go 语言第 17 章 反射需求结构体序列化和反序列化  新问题：桥连接 定义了两个匿名函数 123456test1:&#x3D;func(v1 int, v2 int)&amp;#123;  t.Log(v1,v2)&amp;#125;test2:&#x3D;func(v1 int, v2 int, s string)&amp;#123;  t.Log(v1,v2,s)&amp;#125;  定义一个适配器函数用作统一处理接口，其大致结构如下：">
+  <meta name="description" content="Go 语言第 17 章 反射需求结构体序列化和反序列化  新问题：桥连接 定义了两个匿名函数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Go 语言第 17 章 反射">
 <meta property="og:url" content="https://lllllmaster-lulllll.github.io/2022/03/02/Go%E8%AF%AD%E8%A8%80%E7%AC%AC%2017%20%E7%AB%A0%20%E5%8F%8D%E5%B0%84/index.html">
 <meta property="og:site_name" content="Aurora的博客">
-<meta property="og:description" content="Go 语言第 17 章 反射需求结构体序列化和反序列化  新问题：桥连接 定义了两个匿名函数 123456test1:&#x3D;func(v1 int, v2 int)&amp;#123;  t.Log(v1,v2)&amp;#125;test2:&#x3D;func(v1 int, v2 int, s string)&amp;#123;  t.Log(v1,v2,s)&amp;#125;  定义一个适配器函数用作统一处理接口，其大致结构如下：">
+<meta property="og:description" content="Go 语言第 17 章 反射需求结构体序列化和反序列化  新问题：桥连接 定义了两个匿名函数">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202122044093.png">
 <meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202131452666.png">
@@ -25,7 +25,7 @@
 <meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202132002322.png">
 <meta property="og:image" content="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202132047782.png">
 <meta property="article:published_time" content="2022-03-02T14:26:25.000Z">
-<meta property="article:modified_time" content="2022-03-02T14:49:59.584Z">
+<meta property="article:modified_time" content="2022-03-02T15:47:18.582Z">
 <meta property="article:author" content="Aurora">
 <meta property="article:tag" content="编程,篮球,音乐,电影,音乐,电脑使用技巧">
 <meta name="twitter:card" content="summary">
@@ -313,9 +313,13 @@
     <h1 id="Go-语言第-17-章-反射"><a href="#Go-语言第-17-章-反射" class="headerlink" title="Go 语言第 17 章 反射"></a>Go 语言第 17 章 反射</h1><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><h3 id="结构体序列化和反序列化"><a href="#结构体序列化和反序列化" class="headerlink" title="结构体序列化和反序列化"></a>结构体序列化和反序列化</h3><p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202122044093.png" alt="image-20220212204437940"></p>
 <hr>
 <h3 id="新问题：桥连接"><a href="#新问题：桥连接" class="headerlink" title="新问题：桥连接"></a>新问题：桥连接</h3><ol>
-<li><p>定义了两个匿名函数</p>
+<li>定义了两个匿名函数</li>
+</ol>
+<span id="more"></span>
+
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">test1:=<span class="function"><span class="keyword">func</span><span class="params">(v1 <span class="type">int</span>, v2 <span class="type">int</span>)</span></span>&#123;</span><br><span class="line">  t.Log(v1,v2)</span><br><span class="line">&#125;</span><br><span class="line">test2:=<span class="function"><span class="keyword">func</span><span class="params">(v1 <span class="type">int</span>, v2 <span class="type">int</span>, s <span class="type">string</span>)</span></span>&#123;</span><br><span class="line">  t.Log(v1,v2,s)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+
+<ol>
 <li><p>定义一个适配器函数用作统一处理接口，其大致结构如下：</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bridge:=<span class="function"><span class="keyword">func</span><span class="params">(call <span class="keyword">interface</span>&#123;&#125;,args ...<span class="keyword">interface</span>&#123;&#125;)</span></span>&#123;</span><br><span class="line">  <span class="comment">//内容</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//实现调用 test1 对应的函数</span></span><br><span class="line">bridge(test1,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line"><span class="comment">//实现调用 test1 对应的函数</span></span><br><span class="line">bridge(test2,<span class="number">1</span>,<span class="number">2</span>,<span class="string">&quot;test2&quot;</span>)</span><br></pre></td></tr></table></figure>
 </li>
