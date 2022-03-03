@@ -15,6 +15,11 @@
 <span id="more"></span>
 
 ]]></content>
+      <tags>
+        <tag>JetBrains</tag>
+        <tag>激活教程</tag>
+        <tag>链接</tag>
+      </tags>
   </entry>
   <entry>
     <title>Mac 卸载annconda</title>
@@ -37,6 +42,13 @@
 
 <p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202081949496.png" alt="image-20220208194952465"></p>
 ]]></content>
+      <categories>
+        <category>技术杂记</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>redis 使用</tag>
+      </tags>
   </entry>
   <entry>
     <title>conda 常用设置</title>
@@ -233,8 +245,12 @@
 
 ]]></content>
       <categories>
-        <category>golang</category>
+        <category>技术杂记</category>
       </categories>
+      <tags>
+        <tag>golang</tag>
+        <tag>环境配置</tag>
+      </tags>
   </entry>
   <entry>
     <title>客户信息管理系统</title>
@@ -300,8 +316,12 @@
 
 ]]></content>
       <categories>
-        <category>golang</category>
+        <category>编程</category>
       </categories>
+      <tags>
+        <tag>golang</tag>
+        <tag>项目实战</tag>
+      </tags>
   </entry>
   <entry>
     <title>go 语言_命令行参数</title>
@@ -569,8 +589,12 @@
 </ol>
 ]]></content>
       <categories>
-        <category>golang</category>
+        <category>编程</category>
       </categories>
+      <tags>
+        <tag>golang</tag>
+        <tag>协程与管道</tag>
+      </tags>
   </entry>
   <entry>
     <title>家庭收支记账软件项目</title>
@@ -633,8 +657,13 @@
 </ul>
 ]]></content>
       <categories>
-        <category>golang</category>
+        <category>编程</category>
       </categories>
+      <tags>
+        <tag>golang</tag>
+        <tag>项目实战</tag>
+        <tag>过程实战</tag>
+      </tags>
   </entry>
   <entry>
     <title>Redis</title>
@@ -685,8 +714,13 @@
 
 ]]></content>
       <categories>
-        <category>golang</category>
+        <category>编程</category>
       </categories>
+      <tags>
+        <tag>golang</tag>
+        <tag>redis</tag>
+        <tag>golang 连接 redis</tag>
+      </tags>
   </entry>
   <entry>
     <title>Go_json</title>
@@ -729,8 +763,13 @@
 <h3 id="代码结果："><a href="#代码结果：" class="headerlink" title="代码结果："></a>代码结果：</h3><p><img src="https://icetuchuang.oss-cn-beijing.aliyuncs.com/img/202202102317297.png" alt="image-20220210231713125"></p>
 ]]></content>
       <categories>
-        <category>golang</category>
+        <category>编程</category>
       </categories>
+      <tags>
+        <tag>golang</tag>
+        <tag>json</tag>
+        <tag>序列化&amp;反序列化</tag>
+      </tags>
   </entry>
   <entry>
     <title>第 14 章 文件操作</title>
@@ -844,8 +883,12 @@
 
 ]]></content>
       <categories>
-        <category>golang</category>
+        <category>编程</category>
       </categories>
+      <tags>
+        <tag>golang</tag>
+        <tag>文件操作</tag>
+      </tags>
   </entry>
   <entry>
     <title>Go 语言第 17 章 反射</title>
@@ -962,8 +1005,12 @@
 
 ]]></content>
       <categories>
-        <category>golang</category>
+        <category>编程</category>
       </categories>
+      <tags>
+        <tag>golang</tag>
+        <tag>反射</tag>
+      </tags>
   </entry>
   <entry>
     <title>第 18 章 `TCP` 编程</title>
@@ -1084,8 +1131,13 @@
 
 ]]></content>
       <categories>
-        <category>golang</category>
+        <category>编程</category>
       </categories>
+      <tags>
+        <tag>golang</tag>
+        <tag>网络编程</tag>
+        <tag>tcp编程</tag>
+      </tags>
   </entry>
   <entry>
     <title>Go 语言第 15 章 单元测试</title>
@@ -1206,8 +1258,12 @@
 
 ]]></content>
       <categories>
-        <category>golang</category>
+        <category>编程</category>
       </categories>
+      <tags>
+        <tag>golang</tag>
+        <tag>单元测试</tag>
+      </tags>
   </entry>
   <entry>
     <title>继承和接口的区别</title>
@@ -1261,6 +1317,13 @@
 <p>Warning: The following may be redis configuration files and have not been removed!<br>If desired, remove them manually with <code>rm -rf</code>:<br> &#x2F;opt&#x2F;homebrew&#x2F;etc&#x2F;redis-sentinel.conf  &#x2F;&#x2F;需要手动删除<br> &#x2F;opt&#x2F;homebrew&#x2F;etc&#x2F;redis.conf                 &#x2F;&#x2F;需要手动删除</p>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>技术杂记</category>
+      </categories>
+      <tags>
+        <tag>mac</tag>
+        <tag>redis 使用</tag>
+      </tags>
   </entry>
   <entry>
     <title>常量</title>
