@@ -1670,6 +1670,8 @@
 <h1 id="模板与渲染"><a href="#模板与渲染" class="headerlink" title="模板与渲染"></a>模板与渲染</h1><p>在一些前后端不分离的Web架构中，我们通常需要在后端将一些数据渲染到HTML文档中，从而实现动态的网页（网页的布局和样式大致一样，但展示的内容并不一样）效果。</p>
 <p>我们这里说的模板可以理解为事先定义好的HTML文档文件，模板渲染的作用机制可以简单理解为文本替换操作–使用相应的数据去替换HTML文档中事先准备好的标记。</p>
 <p>很多编程语言的Web框架中都使用各种模板引擎，比如Python语言中Flask框架中使用的jinja2模板引擎。</p>
+<span id="more"></span>
+
 <h2 id="Go语言的模板引擎"><a href="#Go语言的模板引擎" class="headerlink" title="Go语言的模板引擎"></a>Go语言的模板引擎</h2><p>Go语言内置了文本模板引擎<code>text/template</code>和用于HTML文档的<code>html/template</code>。它们的作用机制可以简单归纳如下：</p>
 <ol>
 <li>模板文件通常定义为<code>.tmpl</code>和<code>.tpl</code>为后缀（也可以使用其他的后缀），必须使用<code>UTF8</code>编码。</li>
@@ -1680,8 +1682,6 @@
 <h2 id="模板引擎的使用"><a href="#模板引擎的使用" class="headerlink" title="模板引擎的使用"></a>模板引擎的使用</h2><p>Go语言模板引擎的使用可以分为三部分：定义模板文件、解析模板文件和模板渲染.</p>
 <h3 id="定义模板文件"><a href="#定义模板文件" class="headerlink" title="定义模板文件"></a>定义模板文件</h3><p>其中，定义模板文件时需要我们按照相关语法规则去编写，后文会详细介绍。</p>
 <h3 id="解析模板文件"><a href="#解析模板文件" class="headerlink" title="解析模板文件"></a>解析模板文件</h3><p>上面定义好了模板文件之后，可以使用下面的常用方法去解析模板文件，得到模板对象：</p>
-<span id="more"></span>
-
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(t *Template)</span></span> Parse(src <span class="type">string</span>) (*Template, <span class="type">error</span>) <span class="comment">//解析字符串</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">ParseFiles</span><span class="params">(filenames ...<span class="type">string</span>)</span></span> (*Template, <span class="type">error</span>) <span class="comment">//解析文件</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">ParseGlob</span><span class="params">(pattern <span class="type">string</span>)</span></span> (*Template, <span class="type">error</span>)<span class="comment">//正则匹配</span></span><br></pre></td></tr></table></figure>
 
 <p>当然，你也可以使用<code>func New(name string) *Template</code>函数创建一个名为<code>name</code>的模板，然后对其调用上面的方法去解析模板字符串或模板文件。</p>
