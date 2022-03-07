@@ -1808,6 +1808,8 @@
 <p><a href="https://gorm.io/zh_CN/">中文官方网站</a>内含十分齐全的中文文档，有了它你甚至不需要再继续向下阅读本文。</p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">go get -u gorm.io/gorm</span><br><span class="line">go get -u gorm.io/driver/sqlite</span><br></pre></td></tr></table></figure>
 
+<span id="more"></span>
+
 <h2 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h2><p>连接不同的数据库都需要导入对应数据的驱动程序，<code>GORM</code>已经贴心的为我们包装了一些驱动程序，只需要按如下方式导入需要的数据库驱动即可：</p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> _ <span class="string">&quot;github.com/jinzhu/gorm/dialects/mysql&quot;</span></span><br><span class="line"><span class="comment">// import _ &quot;github.com/jinzhu/gorm/dialects/postgres&quot;</span></span><br><span class="line"><span class="comment">// import _ &quot;github.com/jinzhu/gorm/dialects/sqlite&quot;</span></span><br><span class="line"><span class="comment">// import _ &quot;github.com/jinzhu/gorm/dialects/mssql&quot;</span></span><br></pre></td></tr></table></figure>
 
