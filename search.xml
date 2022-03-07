@@ -1800,7 +1800,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Go语言标准库之http/template</title>
+    <title>GORM入门指南</title>
     <url>/2022/03/07/gorm%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="GORM入门指南"><a href="#GORM入门指南" class="headerlink" title="GORM入门指南"></a>GORM入门指南</h1><p>gorm是一个使用Go语言编写的ORM框架。它文档齐全，对开发者友好，支持主流数据库。</p>
 <p><strong>注意：本文发布于2020-02-11，文中使用的gorm版本有极大概率与你正在使用的不一致，为了更好的使用gorm请移步官方中文文档：<a href="https://gorm.io/zh_CN/docs/">https://gorm.io/zh_CN/docs/</a></strong></p>
