@@ -260,6 +260,107 @@
             
 
   
+    <article id="post-视频切割代码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2022/03/18/%E8%A7%86%E9%A2%91%E5%88%87%E5%89%B2%E4%BB%A3%E7%A0%81/" target="_blank">视频中按序列提取视频帧</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2022/03/18/%E8%A7%86%E9%A2%91%E5%88%87%E5%89%B2%E4%BB%A3%E7%A0%81/" class="archive-article-date">
+        <time datetime="2022-03-18T14:58:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-18</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="视频中按序列提取视频帧"><a href="#视频中按序列提取视频帧" class="headerlink" title="视频中按序列提取视频帧"></a>视频中按序列提取视频帧</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">video_src_path = <span class="string">&quot;/Users/aurora/Movies/AuroraVideo/nature&quot;</span></span><br><span class="line">video_save_path = <span class="string">&quot;/Users/aurora/Pictures&quot;</span></span><br><span class="line"><span class="keyword">if</span> os.path.exists(video_save_path) == <span class="literal">False</span>:</span><br><span class="line">    os.mkdir(video_save_path)  <span class="comment"># 如果文件夹不存在，就创建</span></span><br><span class="line">videos = os.listdir(video_src_path)</span><br><span class="line"></span><br><span class="line">videos = <span class="built_in">filter</span>(<span class="keyword">lambda</span> x: x.endswith(<span class="string">&quot;mp4&quot;</span>), videos)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> each_video <span class="keyword">in</span> videos:</span><br><span class="line">    <span class="built_in">print</span>(each_video)</span><br><span class="line">each_video_name, _ = each_video.split(<span class="string">&#x27;.&#x27;</span>)</span><br><span class="line">m = video_save_path + <span class="string">&#x27;/&#x27;</span> + each_video_name</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (os.path.exists(m) == <span class="literal">False</span>):</span><br><span class="line">    <span class="built_in">print</span>(m)</span><br><span class="line">    os.mkdir(m)  <span class="comment"># 新建“D:/mtcnn/Mathbook_pic/Mathbook/”文件夹</span></span><br><span class="line">each_video_save_full_path = os.path.join(video_save_path, each_video_name) + <span class="string">&#x27;/&#x27;</span></span><br><span class="line"></span><br><span class="line">each_video_full_path = video_src_path + <span class="string">&#x27;/&#x27;</span> + each_video</span><br><span class="line"><span class="built_in">print</span>(each_video_full_path)</span><br><span class="line">cap = cv2.VideoCapture(each_video_full_path)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="literal">False</span> == cap.isOpened():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;open video failed&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;open video succeeded&#x27;</span>)</span><br><span class="line"></span><br><span class="line">count = <span class="number">0</span>  <span class="comment"># 统计帧数</span></span><br><span class="line">frame_gap = <span class="number">10</span>  <span class="comment"># 间隔为1帧，每个1帧读取第1帧</span></span><br><span class="line">success = <span class="literal">True</span></span><br><span class="line">i = <span class="number">0</span></span><br><span class="line"><span class="comment"># 每隔1帧读取一帧</span></span><br><span class="line"><span class="keyword">while</span> (success):</span><br><span class="line">    success, frame = cap.read()</span><br><span class="line">    i = i + <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> (i == frame_gap):  <span class="comment"># 每个10帧读取第10帧</span></span><br><span class="line">        <span class="built_in">print</span>(success)</span><br><span class="line">        <span class="comment"># print &#x27;Read a new frame:&#x27; , success</span></span><br><span class="line">        params = []</span><br><span class="line">        params.append(<span class="built_in">int</span>(cv2.IMWRITE_JPEG_QUALITY))</span><br><span class="line">        params.append(<span class="number">95</span>)</span><br><span class="line">        cv2.imwrite(each_video_save_full_path + each_video_name + <span class="string">&#x27;_%d.jpg&#x27;</span> % count, frame, params)</span><br><span class="line">        count = count + <span class="number">1</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">cap.release()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;OK！&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">视频切割</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">python切割视频</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2022/03/18/%E8%A7%86%E9%A2%91%E5%88%87%E5%89%B2%E4%BB%A3%E7%A0%81/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ES 进阶" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1206,114 +1307,6 @@
 
 
   
-    <article id="post-go 语言环境安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/03/02/go%20%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" target="_blank">go 语言环境安装（Mac）</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/03/02/go%20%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/" class="archive-article-date">
-        <time datetime="2022-03-02T14:26:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-02</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="go-语言环境安装"><a href="#go-语言环境安装" class="headerlink" title="go 语言环境安装"></a>go 语言环境安装</h1><h4 id="1-下载go安装包"><a href="#1-下载go安装包" class="headerlink" title="1. 下载go安装包"></a>1. 下载go安装包</h4><p>官网下载go安装包： <a target="_blank" rel="noopener" href="https://golang.google.cn/dl/">https://golang.google.cn/dl/</a></p>
-<p>下载go二进制包<code>go1.16.2.darwin-amd64.tar.gz</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://golang.google.cn/dl/go1.16.2.darwin-amd64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-安装go"><a href="#2-安装go" class="headerlink" title="2. 安装go"></a>2. 安装go</h4><p>安装目录： <code>/usr/local/go</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -xzvf go1.16.2.darwin-amd64.tar.gz -C /usr/local</span><br><span class="line">cd /usr/local/go</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2022/03/02/go%20%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">golang</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">环境配置</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技术杂记//" class="article-tag-list-link color5">技术杂记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/03/02/go%20%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1577,6 +1570,14 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">elasticsearch</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">视频切割</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">python切割视频</a>
               </li>
             
             <div class="clearfix"></div>
